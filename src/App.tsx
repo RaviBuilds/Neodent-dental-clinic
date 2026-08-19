@@ -8,6 +8,7 @@ import {
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   ArrowRight,
+  ArrowUpRight,
   Award,
   Check,
   Clock3,
@@ -45,6 +46,14 @@ const whatsappLink = `https://wa.me/919030648393?text=${encodeURIComponent(
 const address =
   "Masjid-e-Azizia, Humayun Nagar Road, Royal Colony, Humayun Nagar, Hyderabad, Telangana, India";
 const shortLocation = "Humayun Nagar, Hyderabad";
+const heroLocations = [
+  { number: "01", name: "Humayun Nagar", detail: "Humayun Nagar, Hyderabad" },
+  {
+    number: "02",
+    name: "Nampally",
+    detail: "Medwin Hospital Complex, Nampally",
+  },
+] as const;
 const directions =
   "https://www.google.com/maps/search/?api=1&query=Masjid-e-Azizia%2C%20Humayun%20Nagar%20Road%2C%20Royal%20Colony%2C%20Humayun%20Nagar%2C%20Hyderabad%2C%20Telangana%2C%20India";
 const googleRating = { score: "4.3", count: 259 };
@@ -247,26 +256,23 @@ function Hero({ onBook }: { onBook: () => void }) {
             Expert dental care in <span className="serif">Hyderabad.</span>
           </h1>
           <p className="hero-copy">
-            Thoughtful treatment, professional expertise and a clinic experience
-            designed to help you feel at ease.
+            Thoughtful treatment, experienced specialists and comprehensive dental
+            care across two Hyderabad locations.
           </p>
-          <div className="hero-hours-mobile">
-            <a
-              href={telPhone}
-              className="hero-hours-mobile-phone"
-              data-testid="link-hero-mobile-phone"
-            >
-              <Phone size={14} /> {phone}
-            </a>
-            <div className="hero-hours-mobile-row">
-              <strong>Open today</strong>
-              <span>04:00 PM — 09:00 PM</span>
-              <span className="hero-rating-divider" aria-hidden="true">
-                ·
-              </span>
-              <a href={directions} data-testid="link-hero-mobile-directions">
-                <MapPin size={12} /> {shortLocation}
-              </a>
+          <div className="hero-location-indicator" aria-label="Two NeoDent locations in Hyderabad">
+            <span className="hero-location-kicker">Two locations in Hyderabad</span>
+            <span className="hero-location-names">Humayun Nagar <span aria-hidden="true">·</span> Nampally</span>
+          </div>
+          <div className="hero-hours-mobile hero-mobile-locations">
+            <span className="hero-mobile-locations-title">Our locations</span>
+            <div className="hero-mobile-location-list">
+              {heroLocations.map((location) => (
+                <a href="#clinic" key={location.number}>
+                  <span>{location.number}</span>
+                  <strong>{location.name}</strong>
+                  <ArrowUpRight size={13} aria-hidden="true" />
+                </a>
+              ))}
             </div>
           </div>
           <div className="hero-actions">
@@ -278,23 +284,29 @@ function Hero({ onBook }: { onBook: () => void }) {
             </AppButton>
           </div>
         </div>
-        <div className="hero-meta">
-          <div className="hero-meta-row">
-            <strong>Open today</strong>04:00 PM — 09:00 PM
+        <aside className="hero-meta" aria-label="NeoDent locations">
+          <div className="hero-meta-heading">
+            <span>Our locations</span>
+            <small>Two Hyderabad locations. One standard of care.</small>
           </div>
-          <div className="hero-meta-row hero-meta-row-phone">
-            <strong>Call</strong>
-            <a href={telPhone} data-testid="link-hero-meta-phone">
-              {phone}
-            </a>
+          <div className="hero-location-list">
+            {heroLocations.map((location) => (
+              <a
+                className="hero-location-row"
+                href="#clinic"
+                key={location.number}
+                aria-label={`View ${location.name} location`}
+              >
+                <span className="hero-location-number">{location.number}</span>
+                <span className="hero-location-detail">
+                  <strong>{location.name}</strong>
+                  <span>{location.detail}</span>
+                </span>
+                <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
+            ))}
           </div>
-          <div className="hero-meta-row">
-            <strong>Visit</strong>
-            <a href={directions} data-testid="link-hero-meta-directions">
-              {shortLocation}
-            </a>
-          </div>
-        </div>
+        </aside>
         <div className="scroll-note">Scroll to explore</div>
       </div>
     </section>
