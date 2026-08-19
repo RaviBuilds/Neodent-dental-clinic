@@ -34,6 +34,7 @@ const equipmentImage = "/attached_assets/machines_1786721133671.jpg";
 const detailImage = "/attached_assets/machines_area_1786721129175.jpg";
 const philosophyImage = "/attached_assets/our-philosophy.webp";
 const visitImage = "/attached_assets/machines_for_doctor_1786721135828.jpg";
+const officialLogo = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-mcxdtro9tJUPYblCCvPQN2Fc75G0F8.jpg";
 
 const queryClient = new QueryClient();
 const phone = "+91 9030648393";
@@ -151,7 +152,13 @@ function Navbar({ onBook }: { onBook: () => void }) {
           onClick={closeMenu}
           data-testid="link-home-brand"
         >
-          <span className="brand-mark" aria-hidden="true" />
+          <span className="brand-logo-wrap">
+            <img
+              className="brand-logo"
+              src={officialLogo}
+              alt="Neodent Dental Hospitals"
+            />
+          </span>
           <span className="brand-word">
             NEODENT
             <br />

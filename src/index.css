@@ -3,32 +3,32 @@
 @import "tw-animate-css";
 
 :root {
-  --ink: #18393b;
-  --ink-deep: #102d30;
-  --teal: #18393b;
-  --ivory: #f6f2ea;
-  --paper: #fbfaf7;
-  --sage: #d9e1d9;
-  --sage-deep: #91a69b;
-  --champagne: #c59f68;
-  --clay: #ae755d;
-  --line: rgba(24, 57, 59, 0.16);
-  --muted: #687a77;
-  --background: 42 33% 95%;
-  --foreground: 187 40% 16%;
-  --border: 40 14% 84%;
-  --card: 42 33% 97%;
-  --card-foreground: 187 40% 16%;
-  --card-border: 40 14% 84%;
-  --primary: 185 41% 16%;
-  --primary-foreground: 42 33% 95%;
-  --secondary: 100 17% 86%;
-  --secondary-foreground: 187 40% 16%;
-  --muted-foreground: 180 9% 45%;
-  --accent: 35 44% 59%;
-  --accent-foreground: 185 41% 16%;
-  --input: 40 14% 78%;
-  --ring: 35 44% 59%;
+  --ink: #263033;
+  --ink-deep: #161c1e;
+  --teal: #078b58;
+  --ivory: #f8f6ef;
+  --paper: #fffefa;
+  --sage: #d9eee2;
+  --sage-deep: #16895c;
+  --champagne: #d71920;
+  --clay: #c51b25;
+  --line: rgba(38, 48, 51, 0.16);
+  --muted: #657173;
+  --background: 48 33% 95%;
+  --foreground: 195 13% 17%;
+  --border: 48 18% 84%;
+  --card: 48 33% 98%;
+  --card-foreground: 195 13% 17%;
+  --card-border: 48 18% 84%;
+  --primary: 195 13% 17%;
+  --primary-foreground: 48 33% 95%;
+  --secondary: 143 39% 89%;
+  --secondary-foreground: 195 13% 17%;
+  --muted-foreground: 195 8% 45%;
+  --accent: 354 81% 47%;
+  --accent-foreground: 48 33% 95%;
+  --input: 48 18% 78%;
+  --ring: 143 75% 36%;
   --radius: 0.35rem;
   --app-font-sans: "Manrope", sans-serif;
   --app-font-serif: "DM Serif Display", serif;
@@ -180,30 +180,22 @@ button {
 .brand:hover {
   opacity: 0.88;
 }
-.brand-mark {
-  width: 28px;
-  height: 28px;
-  position: relative;
-  border: 1px solid currentColor;
-  border-radius: 50%;
+.brand-logo-wrap {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  overflow: hidden;
   display: grid;
   place-items: center;
-  opacity: 0.92;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: 0 2px 10px rgba(22, 28, 30, 0.14);
 }
-.brand-mark::before,
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  opacity: 0.82;
-}
-.brand-mark::before {
-  width: 1px;
-  height: 16px;
-}
-.brand-mark::after {
-  width: 16px;
-  height: 1px;
+.brand-logo {
+  width: 54px;
+  height: 54px;
+  max-width: none;
+  object-fit: cover;
 }
 .brand-word {
   font-size: 10.5px;
