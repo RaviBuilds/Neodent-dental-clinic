@@ -742,7 +742,7 @@ button {
 }
 .trust-lead p {
   color: var(--ink);
-  font-size: clamp(26px, 2.5vw, 32px);
+  font-size: clamp(28px, 3.2vw, 42px);
   line-height: 1.38;
   letter-spacing: -0.022em;
   font-weight: 500;
@@ -751,6 +751,15 @@ button {
   padding-left: 26px;
 }
 
+.trust-lead-support {
+  display: block;
+  max-width: 560px;
+  margin-top: 20px;
+  padding-left: 26px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
 .trust-lead p::before {
   content: "";
   position: absolute;
@@ -832,19 +841,39 @@ button {
   border-bottom: none;
 }
 
-.trust-item:hover {
+.trust-item:hover,
+.trust-item:focus-visible,
+.trust-item-active {
   padding-left: 20px;
   padding-right: 20px;
   margin-left: -20px;
   margin-right: -20px;
   background: linear-gradient(
     90deg,
-    rgba(197, 159, 104, 0.04) 0%,
-    rgba(197, 159, 104, 0.02) 70%,
+    rgba(215, 25, 32, 0.07) 0%,
+    rgba(215, 25, 32, 0.025) 70%,
     transparent 100%
   );
-  border-radius: 6px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  box-shadow: 0 4px 24px rgba(22, 28, 30, 0.04);
+  outline: none;
+}
+.trust-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  background: var(--neodent-red);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+.trust-item:hover::before,
+.trust-item:focus-visible::before,
+.trust-item-active::before {
+  transform: scaleY(1);
 }
 
 /* Elegant Serif Number with enhanced depth */
@@ -893,7 +922,8 @@ button {
   transition: opacity 0.5s cubic-bezier(0.16, 0.72, 0.2, 1);
 }
 
-.trust-item:hover .trust-item-number {
+.trust-item:hover .trust-item-number,
+.trust-item-active .trust-item-number {
   opacity: 1;
   transform: scale(1.05);
   background: linear-gradient(
@@ -953,7 +983,8 @@ button {
   transition: all 0.4s cubic-bezier(0.16, 0.72, 0.2, 1);
 }
 
-.trust-item:hover .trust-item-title {
+.trust-item:hover .trust-item-title,
+.trust-item-active .trust-item-title {
   color: var(--ink-deep);
   letter-spacing: -0.026em;
 }
@@ -963,6 +994,29 @@ button {
   opacity: 1;
 }
 
+.trust-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid var(--neodent-border);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.trust-footer-note a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--neodent-red-dark);
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+.trust-footer-note a:hover {
+  gap: 10px;
+}
 .trust-item-description {
   color: var(--muted);
   font-size: 16px;
@@ -972,8 +1026,9 @@ button {
   transition: all 0.35s cubic-bezier(0.16, 0.72, 0.2, 1);
 }
 
-.trust-item:hover .trust-item-description {
-  color: rgba(49, 49, 45, 0.85);
+.trust-item:hover .trust-item-description,
+.trust-item-active .trust-item-description {
+  color: var(--ink);
 }
 
 /* Trust Section Responsive Styles */
@@ -989,7 +1044,12 @@ button {
   }
 
   .trust-lead {
-    margin-bottom: 60px;
+    margin-bottom: 48px;
+  }
+
+  .trust-lead-support {
+    padding-left: 22px;
+    font-size: 15px;
   }
 
   .trust-lead p {
@@ -1068,6 +1128,19 @@ button {
     font-weight: 500;
   }
 
+  .trust-lead-support {
+    margin-top: 16px;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+
+  .trust-footer-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
   .trust-lead p::before {
     top: 8px;
     width: 3px;
@@ -1088,11 +1161,13 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .trust-item:hover {
+  .trust-item:hover,
+  .trust-item:focus-visible,
+  .trust-item-active {
     padding-left: 12px;
     padding-right: 12px;
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .trust-item-number {

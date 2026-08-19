@@ -315,29 +315,33 @@ function Hero({ onBook }: { onBook: () => void }) {
 
 function TrustStrip() {
   const [isVisible, setIsVisible] = useState(false);
+  const [activePrinciple, setActivePrinciple] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
 
   const principles = [
     {
       number: "01",
-      title: "Patient-first care",
-      description: "Care shaped around the individual, not just the procedure.",
+      title: "Experienced specialists",
+      description:
+        "Care led by experienced dental professionals across multiple areas of dentistry.",
     },
     {
       number: "02",
-      title: "A comfortable experience",
+      title: "Comprehensive treatment",
       description:
-        "A reassuring environment designed to make visits feel easier.",
+        "From preventive and restorative care to implants, orthodontics and cosmetic dentistry.",
     },
     {
       number: "03",
-      title: "Clinical expertise",
-      description: "Professional dental knowledge focused on thoughtful care.",
+      title: "Patient-first consultations",
+      description:
+        "Clear conversations, thoughtful treatment planning and care shaped around your individual needs.",
     },
     {
       number: "04",
-      title: "Accessible local care",
-      description: "A conveniently located dental hospital in Hyderabad.",
+      title: "Two Hyderabad locations",
+      description:
+        "Convenient access to NeoDent Dental Hospitals in Humayun Nagar and Nampally.",
     },
   ];
 
@@ -377,13 +381,20 @@ function TrustStrip() {
       <div className="container trust-content">
         <div className="trust-lead">
           <p>A clinic shaped by what patients need from dental care.</p>
+          <span className="trust-lead-support">
+            Good dental care begins with understanding what each patient needs —
+            from the first conversation through treatment and follow-up.
+          </span>
         </div>
         <div className="trust-principles">
           {principles.map((principle, index) => {
             return (
               <div
-                className="trust-item"
+                className={`trust-item ${activePrinciple === index ? "trust-item-active" : ""}`}
                 key={principle.number}
+                onMouseEnter={() => setActivePrinciple(index)}
+                onFocus={() => setActivePrinciple(index)}
+                tabIndex={0}
                 style={{
                   animationDelay: `${0.2 + index * 0.15}s`,
                 }}
@@ -398,6 +409,10 @@ function TrustStrip() {
               </div>
             );
           })}
+        </div>
+        <div className="trust-footer-note">
+          <span>Two locations. One standard of care.</span>
+          <a href="#treatments">Discover our treatments <ArrowRight size={14} aria-hidden="true" /></a>
         </div>
       </div>
     </section>
