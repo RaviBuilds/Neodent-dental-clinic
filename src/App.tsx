@@ -505,9 +505,9 @@ function WhyNeodent() {
   const principles = [
     {
       number: "01",
-      title: "Patient-first care",
+      title: "Experienced specialists",
       description:
-        "A reassuring experience built around listening, clarity and the individual in front of us.",
+        "Care led by experienced dental professionals across multiple areas of dentistry.",
       icon: (
         <svg
           width="32"
@@ -535,9 +535,9 @@ function WhyNeodent() {
     },
     {
       number: "02",
-      title: "A comfortable environment",
+      title: "Comprehensive treatment",
       description:
-        "A familiar, approachable setting that gives you space to feel at ease.",
+        "From preventive and restorative care to implants, orthodontics and cosmetic dentistry.",
       icon: (
         <svg
           width="32"
@@ -572,9 +572,9 @@ function WhyNeodent() {
     },
     {
       number: "03",
-      title: "Professional expertise",
+      title: "Patient-first consultations",
       description:
-        "A focused clinical practice led by Dr. Md. Sirajur Rahman, Prosthodontist & Implantologist.",
+        "Clear conversations, thoughtful treatment planning and care shaped around your individual needs.",
       icon: (
         <svg
           width="32"
@@ -601,9 +601,9 @@ function WhyNeodent() {
     },
     {
       number: "04",
-      title: "Accessible local care",
+      title: "Two Hyderabad locations",
       description:
-        "Expert dental care in Hyderabad, in a clinic that is easy to find and easy to reach.",
+        "Convenient access to NeoDent Dental Hospitals in Humayun Nagar and Nampally.",
       icon: (
         <svg
           width="32"
@@ -756,51 +756,21 @@ function Expertise() {
       title: "Implantology",
       description:
         "Thoughtful implant care guided by a considered clinical approach.",
-      icon: (
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            d="M20 10V30"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M20 10C17 10 15 12 15 15V18H25V15C25 12 23 10 20 10Z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M17 22L20 19L23 22"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M17 28L20 25L23 28"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <circle
-            cx="20"
-            cy="30"
-            r="2"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-        </svg>
-      ),
+      icon: <span className="expertise-icon-glyph" aria-hidden="true">+</span>,
+    },
+    {
+      number: "03",
+      title: "Restorative dentistry",
+      description:
+        "Practical restorative care that helps bring back everyday comfort and function.",
+      icon: <span className="expertise-icon-glyph" aria-hidden="true">+</span>,
+    },
+    {
+      number: "04",
+      title: "Cosmetic dentistry",
+      description:
+        "Subtle, considered improvements designed around your natural smile.",
+      icon: <span className="expertise-icon-glyph" aria-hidden="true">+</span>,
     },
   ];
 
@@ -867,8 +837,8 @@ function Expertise() {
             Our dental <span className="serif">expertise.</span>
           </h2>
           <p className="section-intro" style={{ marginTop: 26 }}>
-            Two areas of professional focus, brought together in one welcoming
-            Hyderabad practice.
+            A focused range of care, brought together in one welcoming Hyderabad
+            practice.
           </p>
         </div>
         <div className="expertise-list">
@@ -1071,8 +1041,8 @@ function Doctor() {
             <span className="serif">A human approach.</span>
           </h2>
           <p className="section-intro">
-            Neodent is directed by a clinician who brings professional focus and
-            a personal presence to every conversation.
+            Neodent is directed by Dr. Md. Sirajur Rahman, whose work brings
+            specialist clinical focus and a personal presence to every conversation.
           </p>
           <h3 className="doctor-name">Dr. Md. Sirajur Rahman</h3>
           <div className="doctor-credentials">
@@ -1086,6 +1056,9 @@ function Doctor() {
           <p className="doctor-description">
             Director — Neodent Dental Hospitals
           </p>
+          <a className="text-link doctor-link" href="#appointment">
+            Book a consultation <ArrowRight size={14} aria-hidden="true" />
+          </a>
         </div>
       </div>
     </section>
@@ -1155,9 +1128,9 @@ function Recognition() {
             A commitment to considered clinical care.
           </h2>
           <p className="recognition-intro">
-            Recognition that comes from consistent delivery of thoughtful,
-            patient-focused treatment — built on a foundation of clinical
-            precision and continued professional development.
+            A professional standard carried into every consultation — with precise
+            planning, continued learning and a patient experience that feels clear
+            from the first conversation.
           </p>
         </div>
 
@@ -1261,7 +1234,7 @@ function Recognition() {
         {/* Footer Meta */}
         <div className="recognition-footer">
           <Clock3 size={18} strokeWidth={2} aria-hidden="true" />
-          Evening Appointments: 04:00 PM - 09:00 PM
+          Evening appointments available at NeoDent Dental Hospitals: 04:00 PM – 09:00 PM
         </div>
       </div>
     </section>
@@ -1324,13 +1297,25 @@ function Contact({ onBook }: { onBook: () => void }) {
           <h2 id="contact-title" className="section-heading">
             Visit Neodent <span className="serif">Dental Hospitals.</span>
           </h2>
+          <div className="contact-location-summary">
+            <span className="contact-location-kicker">Two locations in Hyderabad</span>
+            <div className="contact-location-list">
+              {heroLocations.map((location) => (
+                <a href="#clinic" key={location.number}>
+                  <span>{location.number}</span>
+                  <strong>{location.name}</strong>
+                  <ArrowUpRight size={14} aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          </div>
           <dl className="contact-details">
             <div className="detail detail-1">
               <div className="detail-icon" aria-hidden="true">
                 <MapPin size={18} strokeWidth={2} />
               </div>
               <div className="detail-body">
-                <dt>Address</dt>
+                <dt>Humayun Nagar</dt>
                 <dd>{address}</dd>
               </div>
             </div>
@@ -1405,7 +1390,7 @@ function FinalCta({ onBook }: { onBook: () => void }) {
       <h2 id="cta-title">
         Let’s make your visit feel <span className="serif">simple.</span>
       </h2>
-      <p>Appointments begin with a conversation.</p>
+      <p>Choose your preferred location, then let&apos;s begin with a conversation.</p>
       <div className="final-actions">
         <AppButton onClick={onBook} variant="primary">
           Book an Appointment <ArrowRight size={14} />
@@ -1462,12 +1447,13 @@ function Footer() {
                 Get directions
               </a>
               <span>04:00 PM – 09:00 PM</span>
+              <span>Humayun Nagar · Nampally, Hyderabad</span>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Neodent Dental Hospitals</span>
-          <span>Masjid-e-Azizia, Humayun Nagar Road, Hyderabad</span>
+          <span>Two Hyderabad locations · One standard of care</span>
         </div>
       </div>
     </footer>

@@ -2278,7 +2278,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--sage-deep);
+  color: var(--neodent-red);
   background: rgba(106, 140, 126, 0.06);
   border-radius: 50%;
   opacity: 0;
@@ -2306,6 +2306,13 @@ button {
   width: 40px;
   height: 40px;
   display: block;
+}
+
+.expertise-icon-glyph {
+  font-family: var(--app-font-serif);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 /* Number Badge */
@@ -2910,6 +2917,12 @@ button {
 }
 .doctor-credential:hover span {
   color: var(--paper);
+}
+
+.doctor-link {
+  margin-top: 26px;
+  opacity: 1;
+  transform: none;
 }
 
 .doctor-description {
@@ -4737,8 +4750,43 @@ button {
   transform: translateX(0);
 }
 
+.contact-location-summary {
+  margin: 26px 0 30px;
+  padding: 16px 18px;
+  border-left: 2px solid var(--neodent-red);
+  background: rgba(227, 241, 232, 0.55);
+}
+.contact-location-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--neodent-green-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.contact-location-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+.contact-location-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: none;
+}
+.contact-location-list a > span {
+  color: var(--neodent-red);
+  font-family: var(--app-font-serif);
+}
+.contact-location-list a svg {
+  color: var(--neodent-red);
+}
 .contact-details {
-  margin-top: 48px;
+  margin-top: 0;
 }
 .detail {
   border-top: 1px solid var(--line);
