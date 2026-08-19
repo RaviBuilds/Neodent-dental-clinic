@@ -1,0 +1,69 @@
+[     305ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:17986
+[  410062ms] [ERROR] Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `TrustStrip`.
+    at createFiberFromTypeAndProps (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:3216:30)
+    at createFiberFromElement (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:3229:16)
+    at updateElement (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:5534:22)
+    at updateSlot (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:5621:104)
+    at reconcileChildrenArray (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:5763:28)
+    at reconcileChildFibersImpl (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:5995:88)
+    at http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:6061:35
+    at reconcileChildren (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:6444:123)
+    at beginWork (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:7830:104)
+    at runWithFiberInDEV (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:1485:72) 
+    at div (<anonymous>)
+    at div (<anonymous>)
+    at div (<anonymous>)
+    at div (<anonymous>)
+    at section (<anonymous>)
+    at TrustStrip (http://localhost:5173/Program%20Files/Git/src/App.tsx?t=1786814856304:418:37)
+    at main (<anonymous>)
+    at div (<anonymous>)
+    at Home (http://localhost:5173/Program%20Files/Git/src/App.tsx?t=1786814856304:2297:49)
+    at Route (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/wouter.js?v=a68476a1:302:16)
+    at Switch (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/wouter.js?v=a68476a1:359:17)
+    at ErrorBoundary (http://localhost:5173/Program%20Files/Git/src/components/error-boundary.tsx:64:8)
+    at RoutedErrorBoundary (http://localhost:5173/Program%20Files/Git/src/App.tsx?t=1786814856304:2527:32)
+    at Router (<anonymous>)
+    at Router (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/wouter.js?v=a68476a1:254:17)
+    at Provider (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/chunk-AOMXMT2D.js?v=a68476a1:142:15)
+    at TooltipProvider (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=a68476a1:2362:5)
+    at QueryClientProvider (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/@tanstack_react-query.js?v=a68476a1:3188:3)
+    at App (<anonymous>)
+    at ErrorBoundary (http://localhost:5173/Program%20Files/Git/src/components/error-boundary.tsx:64:8) @ http://localhost:5173/Program%20Files/Git/src/main.tsx:9
+[  410084ms] [ERROR] ErrorBoundary caught an error: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `TrustStrip`.
+    at createFiberFromTypeAndProps (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:3216:30)
+    at createFiberFromElement (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:3229:16)
+    at updateElement (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:5534:22)
+    at updateSlot (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:5621:104)
+    at reconcileChildrenArray (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:5763:28)
+    at reconcileChildFibersImpl (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:5995:88)
+    at http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:6061:35
+    at reconcileChildren (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:6444:123)
+    at beginWork (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:7830:104)
+    at runWithFiberInDEV (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/react-dom_client.js?v=a68476a1:1485:72) 
+    at div (<anonymous>)
+    at div (<anonymous>)
+    at div (<anonymous>)
+    at div (<anonymous>)
+    at section (<anonymous>)
+    at TrustStrip (http://localhost:5173/Program%20Files/Git/src/App.tsx?t=1786814856304:418:37)
+    at main (<anonymous>)
+    at div (<anonymous>)
+    at Home (http://localhost:5173/Program%20Files/Git/src/App.tsx?t=1786814856304:2297:49)
+    at Route (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/wouter.js?v=a68476a1:302:16)
+    at Switch (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/wouter.js?v=a68476a1:359:17)
+    at ErrorBoundary (http://localhost:5173/Program%20Files/Git/src/components/error-boundary.tsx:64:8)
+    at RoutedErrorBoundary (http://localhost:5173/Program%20Files/Git/src/App.tsx?t=1786814856304:2527:32)
+    at Router (<anonymous>)
+    at Router (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/wouter.js?v=a68476a1:254:17)
+    at Provider (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/chunk-AOMXMT2D.js?v=a68476a1:142:15)
+    at TooltipProvider (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=a68476a1:2362:5)
+    at QueryClientProvider (http://localhost:5173/Program%20Files/Git/node_modules/.vite/deps/@tanstack_react-query.js?v=a68476a1:3188:3)
+    at App (<anonymous>)
+    at ErrorBoundary (http://localhost:5173/Program%20Files/Git/src/components/error-boundary.tsx:64:8) @ http://localhost:5173/Program%20Files/Git/src/components/error-boundary.tsx:69
+[  639017ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/Program%20Files/Git/src/index.css?t=1786815087185:0
+[  639018ms] [ERROR] [vite] Failed to reload /src/index.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/Program%20Files/Git/@vite/client:808

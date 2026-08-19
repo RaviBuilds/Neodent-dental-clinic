@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Neodent Dental Hospitals"
+description = "A premium single-page website for Neodent Dental Hospitals in Hyderabad, helping patients understand the clinic, meet the doctor, explore the space, and book an appointment."
+version = "1.0.0"
+id = "artifacts/neodent-dental-hospitals"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19294
+
+[services.development]
+run = "pnpm --filter @workspace/neodent-dental-hospitals run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/neodent-dental-hospitals", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/neodent-dental-hospitals/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19294"
+BASE_PATH = "/"

@@ -1,0 +1,251 @@
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e5]:
+        - link [ref=f1e6] [cursor=pointer]:
+          - /url: "#home"
+          - generic [ref=f1e8]: NEODENTDENTAL HOSPITALS
+        - navigation "Primary navigation" [ref=f1e9]:
+          - link "Home" [ref=f1e10] [cursor=pointer]:
+            - /url: "#home"
+          - link "About" [ref=f1e11] [cursor=pointer]:
+            - /url: "#about"
+          - link "Expertise" [ref=f1e12] [cursor=pointer]:
+            - /url: "#expertise"
+          - link "Clinic" [ref=f1e13] [cursor=pointer]:
+            - /url: "#clinic"
+          - link "Doctor" [ref=f1e14] [cursor=pointer]:
+            - /url: "#doctor"
+          - link "Contact" [ref=f1e15] [cursor=pointer]:
+            - /url: "#contact"
+        - button "Book Appointment" [ref=f1e16] [cursor=pointer]
+    - main [ref=f1e17]:
+      - region [ref=f1e18]:
+        - img "Dr. Md. Sirajur Rahman with a patient at Neodent" [ref=f1e20]
+        - generic [ref=f1e21]:
+          - generic [ref=f1e22]:
+            - generic [ref=f1e23]: Neodent Dental Hospitals
+            - heading "Expert dental care in Hyderabad." [level=1] [ref=f1e24]
+            - paragraph [ref=f1e25]: Thoughtful treatment, professional expertise and a clinic experience designed to help you feel at ease.
+            - generic [ref=f1e26]:
+              - button "Book an Appointment" [ref=f1e27] [cursor=pointer]
+              - link "Call the Clinic" [ref=f1e30] [cursor=pointer]:
+                - /url: tel:+919030648393
+          - generic [ref=f1e33]:
+            - strong [ref=f1e34]: Open today
+            - text: 04:00 PM — 09:00 PM
+          - generic [ref=f1e35]: Scroll to explore
+      - region "Our care principles" [ref=f1e36]:
+        - generic [ref=f1e37]:
+          - paragraph [ref=f1e39]: A clinic shaped by what patients need from dental care.
+          - generic [ref=f1e40]:
+            - generic [ref=f1e41]:
+              - generic [ref=f1e42]: "01"
+              - generic [ref=f1e43]:
+                - heading "Patient-first care" [level=3] [ref=f1e44]
+                - paragraph [ref=f1e45]: Care shaped around the individual, not just the procedure.
+            - generic [ref=f1e46]:
+              - generic [ref=f1e47]: "02"
+              - generic [ref=f1e48]:
+                - heading "A comfortable experience" [level=3] [ref=f1e49]
+                - paragraph [ref=f1e50]: A reassuring environment designed to make visits feel easier.
+            - generic [ref=f1e51]:
+              - generic [ref=f1e52]: "03"
+              - generic [ref=f1e53]:
+                - heading "Clinical expertise" [level=3] [ref=f1e54]
+                - paragraph [ref=f1e55]: Professional dental knowledge focused on thoughtful care.
+            - generic [ref=f1e56]:
+              - generic [ref=f1e57]: "04"
+              - generic [ref=f1e58]:
+                - heading "Accessible local care" [level=3] [ref=f1e59]
+                - paragraph [ref=f1e60]: A conveniently located dental hospital in Hyderabad.
+      - region [ref=f1e61]:
+        - generic [ref=f1e62]:
+          - figure "Care that begins with attention." [ref=f1e63]:
+            - img "Close dental treatment moment showing attentive clinical care at Neodent" [ref=f1e65]
+          - generic [ref=f1e67]:
+            - generic [ref=f1e68]: Our philosophy
+            - heading "Dental care designed around people, not just procedures." [level=2] [ref=f1e69]
+            - paragraph [ref=f1e70]:
+              - generic [ref=f1e71]: "\""
+              - text: A good visit begins before treatment starts.
+            - paragraph [ref=f1e72]: At Neodent, we believe a dental visit should feel clear, comfortable and considered. Our approach is to make quality care feel approachable, with attention to the person sitting in the chair.
+            - link "See the patient experience" [ref=f1e73] [cursor=pointer]:
+              - /url: "#experience"
+      - region [ref=f1e76]:
+        - generic [ref=f1e77]:
+          - generic [ref=f1e78]:
+            - generic [ref=f1e79]:
+              - generic [ref=f1e80]: Why Neodent
+              - heading "Quietly considered." [level=2] [ref=f1e81]: Quietlyconsidered.
+            - paragraph [ref=f1e82]: "The details of a good visit matter: a calm room, a clear conversation and care that never feels rushed."
+          - generic [ref=f1e83]:
+            - generic [ref=f1e89]:
+              - generic [ref=f1e90]: "01"
+              - heading "Patient-first care" [level=3] [ref=f1e91]
+              - paragraph [ref=f1e92]: A reassuring experience built around listening, clarity and the individual in front of us.
+            - generic [ref=f1e99]:
+              - generic [ref=f1e100]: "02"
+              - heading "A comfortable environment" [level=3] [ref=f1e101]
+              - paragraph [ref=f1e102]: A familiar, approachable setting that gives you space to feel at ease.
+            - generic [ref=f1e108]:
+              - generic [ref=f1e109]: "03"
+              - heading "Professional expertise" [level=3] [ref=f1e110]
+              - paragraph [ref=f1e111]: A focused clinical practice led by Dr. Md. Sirajur Rahman, Prosthodontist & Implantologist.
+            - generic [ref=f1e117]:
+              - generic [ref=f1e118]: "04"
+              - heading "Accessible local care" [level=3] [ref=f1e119]
+              - paragraph [ref=f1e120]: Expert dental care in Hyderabad, in a clinic that is easy to find and easy to reach.
+      - region [ref=f1e121]:
+        - generic [ref=f1e122]:
+          - generic [ref=f1e123]:
+            - generic [ref=f1e124]: Focused care
+            - heading "Our dental expertise." [level=2] [ref=f1e125]
+            - paragraph [ref=f1e126]: Two areas of professional focus, brought together in one welcoming Hyderabad practice.
+          - generic [ref=f1e127]:
+            - generic [ref=f1e128]:
+              - generic [ref=f1e129]: "01"
+              - generic [ref=f1e136]:
+                - generic [ref=f1e137]: 01 / FOCUS
+                - heading "Prosthodontics" [level=3] [ref=f1e138]
+                - paragraph [ref=f1e139]: Focused care for restoring function, comfort and confidence.
+            - generic [ref=f1e140]:
+              - generic [ref=f1e141]: "02"
+              - generic [ref=f1e150]:
+                - generic [ref=f1e151]: 02 / FOCUS
+                - heading "Implantology" [level=3] [ref=f1e152]
+                - paragraph [ref=f1e153]: Thoughtful implant care guided by a considered clinical approach.
+      - region [ref=f1e154]:
+        - generic [ref=f1e155]:
+          - figure "Care in practice" [ref=f1e156]:
+            - img "Dental equipment and clinical workspace at Neodent" [ref=f1e158]
+          - generic [ref=f1e160]:
+            - generic [ref=f1e161]: Meet the doctor
+            - heading "A steady hand. A human approach." [level=2] [ref=f1e162]: A steady hand.A human approach.
+            - paragraph [ref=f1e163]: Neodent is directed by a clinician who brings professional focus and a personal presence to every conversation.
+            - heading "Dr. Md. Sirajur Rahman" [level=3] [ref=f1e164]
+            - generic [ref=f1e165]:
+              - generic [ref=f1e166]: Prosthodontist
+              - generic [ref=f1e173]: Implantologist
+            - paragraph [ref=f1e179]: Director — Neodent Dental Hospitals
+      - region [ref=f1e180]:
+        - generic [ref=f1e182]:
+          - generic [ref=f1e183]:
+            - paragraph [ref=f1e184]: Professional recognition
+            - heading "A commitment to considered clinical care." [level=2] [ref=f1e188]
+            - paragraph [ref=f1e189]: Recognition that comes from consistent attention, professional standards and genuine patient trust.
+          - figure [ref=f1e191]:
+            - img "Dr. Md. Sirajur Rahman receiving professional recognition"
+          - generic [ref=f1e196]:
+            - generic [ref=f1e197]:
+              - heading "Professional Excellence" [level=3] [ref=f1e202]
+              - paragraph [ref=f1e203]: Maintaining the highest clinical standards in every procedure
+            - generic [ref=f1e204]:
+              - heading "Patient Trust" [level=3] [ref=f1e211]
+              - paragraph [ref=f1e212]: Building lasting relationships through genuine care
+            - generic [ref=f1e213]:
+              - heading "Consistent Care" [level=3] [ref=f1e217]
+              - paragraph [ref=f1e218]: Proven approach refined over years of practice
+          - generic [ref=f1e219]: 04:00 PM - 09:00 PM
+      - region [ref=f1e223]:
+        - generic [ref=f1e224]:
+          - generic [ref=f1e226]:
+            - generic [ref=f1e227]: The clinic
+            - heading "Spaces designed around care." [level=2] [ref=f1e228]
+          - generic [ref=f1e229]:
+            - button "Open The Neodent entrance" [ref=f1e230]:
+              - img "Entrance to Neodent Dental Hospitals" [ref=f1e231]
+              - generic [ref=f1e232]: The Neodent entrance
+            - button "Open A considered waiting room" [ref=f1e233]:
+              - img "Neodent Dental Hospitals waiting area" [ref=f1e234]
+              - generic [ref=f1e235]: A considered waiting room
+            - button "Open Treatment room" [ref=f1e236]:
+              - img "Dental treatment equipment in a Neodent room" [ref=f1e237]
+              - generic [ref=f1e238]: Treatment room
+            - button "Open Inside the clinic" [ref=f1e239]:
+              - img "Dental treatment room at Neodent" [ref=f1e240]
+              - generic [ref=f1e241]: Inside the clinic
+            - button "Open Clinical detail":
+              - img "Dental equipment in a treatment room"
+              - generic [ref=f1e242]: Clinical detail
+      - region [ref=f1e243]:
+        - img "Dr. Md. Sirajur Rahman in clinical discussion" [ref=f1e245]
+        - generic [ref=f1e247]:
+          - generic [ref=f1e248]: Patient experience
+          - heading "What to expect from a visit to Neodent." [level=2] [ref=f1e249]
+          - paragraph [ref=f1e250]: A considered appointment from the first hello to the final goodbye.
+      - region [ref=f1e251]:
+        - generic [ref=f1e252]:
+          - generic [ref=f1e253]:
+            - generic [ref=f1e254]: Find your way to us
+            - heading "Visit Neodent Dental Hospitals." [level=2] [ref=f1e255]
+            - generic [ref=f1e256]:
+              - generic [ref=f1e257]:
+                - term [ref=f1e258]: Address
+                - definition [ref=f1e259]: Masjid-e-Azizia, Humayun Nagar Road, Royal Colony, Humayun Nagar, Hyderabad, Telangana, India
+              - generic [ref=f1e260]:
+                - term [ref=f1e261]: Phone
+                - definition [ref=f1e262]:
+                  - link "+91 9030648393" [ref=f1e263] [cursor=pointer]:
+                    - /url: tel:+919030648393
+              - generic [ref=f1e264]:
+                - term [ref=f1e265]: Hours
+                - definition [ref=f1e266]: 04:00 PM – 09:00 PM
+            - generic [ref=f1e270]:
+              - link "Call now" [ref=f1e271] [cursor=pointer]:
+                - /url: tel:+919030648393
+              - link "Directions" [ref=f1e274] [cursor=pointer]:
+                - /url: https://www.google.com/maps/search/?api=1&query=Masjid-e-Azizia%2C%20Humayun%20Nagar%20Road%2C%20Royal%20Colony%2C%20Humayun%20Nagar%2C%20Hyderabad%2C%20Telangana%2C%20India
+          - generic "Neodent Dental Hospitals location" [ref=f1e278]:
+            - img "Neodent Dental Hospitals entrance on Humayun Nagar Road" [ref=f1e279]
+            - generic [ref=f1e280]:
+              - generic [ref=f1e281]: Find us in Humayun Nagar
+              - generic [ref=f1e282]: Masjid-e-Azizia, Humayun Nagar Road, Royal Colony, Humayun Nagar, Hyderabad, Telangana, India
+              - link "Open directions" [ref=f1e283] [cursor=pointer]:
+                - /url: https://www.google.com/maps/search/?api=1&query=Masjid-e-Azizia%2C%20Humayun%20Nagar%20Road%2C%20Royal%20Colony%2C%20Humayun%20Nagar%2C%20Hyderabad%2C%20Telangana%2C%20India
+        - button "Prefer to book first?" [ref=f1e287] [cursor=pointer]
+      - region [ref=f1e290]:
+        - text: NEODENT
+        - generic [ref=f1e291]: Your next visit
+        - heading "Let’s make your visit feel simple." [level=2] [ref=f1e292]
+        - paragraph [ref=f1e293]: Appointments begin with a conversation.
+        - generic [ref=f1e294]:
+          - button "Book an Appointment" [ref=f1e295] [cursor=pointer]
+          - link "Call +91 9030648393" [ref=f1e298] [cursor=pointer]:
+            - /url: tel:+919030648393
+    - contentinfo [ref=f1e301]:
+      - generic [ref=f1e302]:
+        - generic [ref=f1e303]:
+          - generic [ref=f1e304]:
+            - link "NEODENT DENTAL HOSPITALS" [ref=f1e305] [cursor=pointer]:
+              - /url: "#home"
+              - generic [ref=f1e307]: NEODENTDENTAL HOSPITALS
+            - paragraph [ref=f1e308]: Expert dental care in Hyderabad, presented with clarity and care.
+          - generic [ref=f1e309]:
+            - generic [ref=f1e310]: Explore
+            - navigation "Footer navigation" [ref=f1e311]:
+              - link "Home" [ref=f1e312] [cursor=pointer]:
+                - /url: "#home"
+              - link "About" [ref=f1e313] [cursor=pointer]:
+                - /url: "#about"
+              - link "Expertise" [ref=f1e314] [cursor=pointer]:
+                - /url: "#expertise"
+              - link "Clinic" [ref=f1e315] [cursor=pointer]:
+                - /url: "#clinic"
+              - link "Doctor" [ref=f1e316] [cursor=pointer]:
+                - /url: "#doctor"
+              - link "Contact" [ref=f1e317] [cursor=pointer]:
+                - /url: "#contact"
+          - generic [ref=f1e318]:
+            - generic [ref=f1e319]: Contact
+            - generic [ref=f1e320]:
+              - link "+91 9030648393" [ref=f1e321] [cursor=pointer]:
+                - /url: tel:+919030648393
+              - link "Get directions" [ref=f1e322] [cursor=pointer]:
+                - /url: https://www.google.com/maps/search/?api=1&query=Masjid-e-Azizia%2C%20Humayun%20Nagar%20Road%2C%20Royal%20Colony%2C%20Humayun%20Nagar%2C%20Hyderabad%2C%20Telangana%2C%20India
+              - generic [ref=f1e323]: 04:00 PM – 09:00 PM
+        - generic [ref=f1e324]:
+          - generic [ref=f1e325]: © 2026 Neodent Dental Hospitals
+          - generic [ref=f1e326]: Masjid-e-Azizia, Humayun Nagar Road, Hyderabad
+  - region "Notifications (F8)":
+    - list

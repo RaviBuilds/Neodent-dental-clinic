@@ -1,0 +1,4 @@
+[     411ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=d21560fd:17986
+[  982332ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/@fs/E:/Local%20Clients/dental%20website/neudent%20replit/artifacts/neodent-dental-hospitals/src/App.tsx?t=1786958518306:0
+[  982332ms] [ERROR] [vite] Failed to reload /@fs/E:/Local Clients/dental website/neudent replit/artifacts/neodent-dental-hospitals/src/App.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:808
+[  982333ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:864

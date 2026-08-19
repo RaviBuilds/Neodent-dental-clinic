@@ -1,0 +1,29 @@
+{
+	"mcpServers": {
+		"playwright": {
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npx",
+				"-y",
+				"@playwright/mcp@latest"
+			],
+			"disabled": false,
+			"alwaysAllow": [
+				"browser_resize",
+				"browser_click",
+				"browser_console_messages",
+				"browser_wait_for",
+				"browser_evaluate",
+				"browser_hover",
+				"browser_close",
+				"browser_navigate",
+				"browser_run_code_unsafe",
+				"browser_snapshot",
+				"browser_find",
+				"browser_press_key",
+				"browser_take_screenshot"
+			]
+		}
+	}
+}

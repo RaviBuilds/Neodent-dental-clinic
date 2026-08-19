@@ -1,0 +1,541 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Infiniti Fitness home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Infiniti Fitness" [ref=e7]
+      - button "Open menu" [ref=e8]
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - img "The Infiniti Fitness training floor — racks, free weights and open floor space." [ref=e17]
+      - generic [ref=e36]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: Hyderabad's no-excuses gym
+          - heading "Stop being a dumbbell, burn fat, not muscle." [level=1] [ref=e40]:
+            - generic [ref=e42]:
+              - generic [ref=e43]: Stop
+              - generic [ref=e45]: being
+              - generic [ref=e47]: a
+              - generic [ref=e49]: dumbbell,
+            - generic [ref=e52]:
+              - generic [ref=e53]: burn
+              - generic [ref=e55]: fat,
+              - generic [ref=e57]: not
+              - generic [ref=e59]: muscle.
+          - paragraph [ref=e62]: Advanced training. Real trainers. Prices that don't punish you for showing up.
+        - generic [ref=e65]:
+          - link "Book Free Trial" [ref=e68] [cursor=pointer]:
+            - /url: /#free-trial
+          - link "See Membership Plans →" [ref=e71] [cursor=pointer]:
+            - /url: /pricing
+            - generic [ref=e72]:
+              - text: See Membership Plans
+              - generic [ref=e73]: →
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - generic [ref=e76]: 2 Hyderabad locations
+            - generic [ref=e77]: 0 Hyderabad locations
+          - generic [ref=e78]: •
+          - generic [ref=e79]: Since 2016
+          - generic [ref=e80]: •
+          - generic [ref=e81]: Real coaching
+        - link "Scroll to What We Offer" [ref=e83] [cursor=pointer]:
+          - /url: "#programs"
+          - generic [ref=e84]: Explore training
+    - generic [ref=e91]:
+      - generic [ref=e93]:
+        - generic [ref=e94]: "2016"
+        - paragraph [ref=e95]: Since
+      - generic [ref=e97]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: "2"
+          - text: "0"
+        - paragraph [ref=e101]: Hyderabad Locations
+      - generic [ref=e103]:
+        - generic [ref=e105]:
+          - generic [ref=e106]: "9"
+          - text: "0"
+        - paragraph [ref=e107]: Training Disciplines
+      - generic [ref=e109]:
+        - generic [ref=e111]:
+          - generic [ref=e112]: "6"
+          - text: "0"
+        - paragraph [ref=e113]: Dedicated Trainers
+    - generic [ref=e114]:
+      - generic [ref=e117]:
+        - paragraph [ref=e119]: What We Offer
+        - heading "Nine ways to get after it" [level=2] [ref=e120]:
+          - generic [ref=e121]: Nine
+          - generic [ref=e123]: ways
+          - generic [ref=e125]: to
+          - generic [ref=e127]: get
+          - generic [ref=e129]: after
+          - generic [ref=e131]: it
+        - paragraph [ref=e134]: From crossfit to rock climbing, every discipline is coached, not just supervised.
+      - generic [ref=e138]:
+        - paragraph [ref=e139]: Swipe to explore all 9 programs
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - link "Cardio training at Infiniti Fitness — view program details" [ref=e144] [cursor=pointer]:
+              - /url: /programs/cardio
+              - generic [ref=e146]:
+                - generic [ref=e147]: "01"
+                - generic [ref=e150]:
+                  - heading "Cardio" [level=3] [ref=e152]
+                  - paragraph [ref=e154]: Amazing things come to those who sweat.
+                  - generic [ref=e155]: View Program
+            - link "Strength Training training at Infiniti Fitness — view program details" [ref=e160] [cursor=pointer]:
+              - /url: /programs/strength-training
+              - generic [ref=e162]:
+                - generic [ref=e163]: "02"
+                - generic [ref=e166]:
+                  - heading "Strength Training" [level=3] [ref=e168]
+                  - paragraph [ref=e170]: Build a powerful foundation and lift beyond it.
+                  - generic [ref=e171]: View Program
+            - link "Crossfit training at Infiniti Fitness — view program details" [ref=e176] [cursor=pointer]:
+              - /url: /programs/crossfit
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - generic: Flagship Format
+                  - generic: "03"
+                - generic [ref=e182]:
+                  - heading "Crossfit" [level=3] [ref=e184]
+                  - paragraph [ref=e186]: Climb. Row. Lift. Repeat.
+                  - generic [ref=e187]: View Program
+            - link "Kick-boxing training at Infiniti Fitness — view program details" [ref=e192] [cursor=pointer]:
+              - /url: /programs/kick-boxing
+              - generic [ref=e194]:
+                - generic [ref=e195]: "04"
+                - generic [ref=e198]:
+                  - heading "Kick-boxing" [level=3] [ref=e200]
+                  - paragraph [ref=e202]: Give your workout routine a kick.
+                  - generic [ref=e203]: View Program
+            - link "HIIT training at Infiniti Fitness — view program details" [ref=e208] [cursor=pointer]:
+              - /url: /programs/hiit-high-intensity-interval-training
+              - generic [ref=e210]:
+                - generic [ref=e211]: "05"
+                - generic [ref=e214]:
+                  - heading "HIIT" [level=3] [ref=e216]
+                  - paragraph [ref=e218]: Build muscle. Slash fat. Fast.
+                  - generic [ref=e219]: View Program
+            - link "Self-Defence training at Infiniti Fitness — view program details" [ref=e224] [cursor=pointer]:
+              - /url: /programs/self-defence
+              - generic [ref=e226]:
+                - generic [ref=e227]: "06"
+                - generic [ref=e230]:
+                  - heading "Self-Defence" [level=3] [ref=e232]
+                  - paragraph [ref=e234]: Boost the warrior within you.
+                  - generic [ref=e235]: View Program
+            - link "Functional Training training at Infiniti Fitness — view program details" [ref=e240] [cursor=pointer]:
+              - /url: /programs/functional-training
+              - generic [ref=e242]:
+                - generic [ref=e243]: "07"
+                - generic [ref=e246]:
+                  - heading "Functional Training" [level=3] [ref=e248]
+                  - paragraph [ref=e250]: Engage multiple muscle groups in a single movement.
+                  - generic [ref=e251]: View Program
+            - link "Rock Climbing training at Infiniti Fitness — view program details" [ref=e256] [cursor=pointer]:
+              - /url: /programs/rock-climbing
+              - generic [ref=e258]:
+                - generic [ref=e259]: "08"
+                - generic [ref=e262]:
+                  - heading "Rock Climbing" [level=3] [ref=e264]
+                  - paragraph [ref=e266]: Every mountain top is within reach if you just keep climbing.
+                  - generic [ref=e267]: View Program
+            - link "Steam training at Infiniti Fitness — view program details" [ref=e272] [cursor=pointer]:
+              - /url: /programs/steam
+              - generic [ref=e274]:
+                - generic [ref=e275]: "09"
+                - generic [ref=e278]:
+                  - heading "Steam" [level=3] [ref=e280]
+                  - paragraph [ref=e282]: Recover in our Relaxation Station.
+                  - generic [ref=e283]: View Program
+          - group "Programs" [ref=e288]:
+            - paragraph [ref=e289]:
+              - text: "01"
+              - generic [ref=e290]: / 09
+            - generic [ref=e291]:
+              - button "Go to card 1" [ref=e292]
+              - button "Go to card 2" [ref=e294]
+              - button "Go to card 3" [ref=e296]
+              - button "Go to card 4" [ref=e298]
+              - button "Go to card 5" [ref=e300]
+              - button "Go to card 6" [ref=e302]
+              - button "Go to card 7" [ref=e304]
+              - button "Go to card 8" [ref=e306]
+              - button "Go to card 9" [ref=e308]
+            - generic [ref=e310]: Card 1 of 9
+            - generic [ref=e311]:
+              - button "Previous card" [disabled]
+              - button "Next card" [ref=e312] [cursor=pointer]
+      - generic [ref=e320]:
+        - paragraph [ref=e322]: Train With Purpose
+        - heading "Real Coaching. Real Results." [level=3] [ref=e324]: Real Coaching.Real Results.
+        - paragraph [ref=e326]: Every discipline on this page is led by a coach who knows your name, not just your membership number.
+        - link "Explore Training" [ref=e329] [cursor=pointer]:
+          - /url: /programs
+    - generic [ref=e333]:
+      - paragraph [ref=e335]: Our Philosophy
+      - heading "We cut the spa. Not the results." [level=2] [ref=e337]:
+        - text: We cut the spa.
+        - generic [ref=e338]: Not the results.
+      - paragraph [ref=e341]: No sauna. No pool. No paper towels. We skip the expensive extras so training stays genuinely affordable — real trainers, imported equipment, and honest pricing, without the markup that pays for amenities most members never use.
+      - generic [ref=e343]:
+        - paragraph [ref=e344]: Memberships from ₹199/day
+        - link "View Membership Plans" [ref=e345] [cursor=pointer]:
+          - /url: /pricing
+    - generic [ref=e351]:
+      - generic [ref=e352]:
+        - paragraph [ref=e354]: Inside The Gym
+        - heading "This is where the work gets done." [level=2] [ref=e356]
+        - paragraph [ref=e358]: Squat racks. Battle ropes. Free weights. No filler.
+      - generic [ref=e359]: 01 — Training Floor
+    - generic [ref=e365]:
+      - generic [ref=e366]:
+        - paragraph [ref=e368]: Everything You Need
+        - heading "Everything you need, nothing you're paying extra for" [level=2] [ref=e370]
+      - generic [ref=e371]:
+        - generic [ref=e374]:
+          - generic [ref=e375]: "01"
+          - heading "Imported Equipment" [level=3] [ref=e383]
+          - paragraph [ref=e384]: A wide range of imported equipment and machinery, kept clean and well maintained.
+        - generic [ref=e388]:
+          - generic [ref=e389]: "02"
+          - heading "Steam Recovery Room" [level=3] [ref=e394]
+          - paragraph [ref=e395]: Unwind after training in our steam room — a proper reset for tired muscles.
+        - generic [ref=e398]:
+          - generic [ref=e400]:
+            - generic [ref=e401]: "03"
+            - heading "In-House Café" [level=3] [ref=e406]
+            - paragraph [ref=e407]: Grilled chicken, protein-packed salads, and fresh juices — built for your goals.
+          - generic [ref=e409]:
+            - generic [ref=e410]: "04"
+            - heading "Lockers & Changing Rooms" [level=3] [ref=e415]
+            - paragraph [ref=e416]: Secure lockers during your session, plus a full changing room and washroom.
+        - generic [ref=e418]:
+          - generic [ref=e420]:
+            - generic [ref=e421]: "05"
+            - heading "Biometric Entry" [level=3] [ref=e432]
+            - paragraph [ref=e433]: Every member is linked to our system by biometric and mobile number — no cards to lose.
+          - generic [ref=e435]:
+            - generic [ref=e436]: "06"
+            - heading "On-Site Parking" [level=3] [ref=e441]
+            - paragraph [ref=e442]: Pull up and train — parking is available right outside both branches.
+    - generic [ref=e445]:
+      - generic [ref=e446]:
+        - generic [ref=e447]:
+          - paragraph [ref=e449]: Train With Experts
+          - paragraph [ref=e451]: Different strengths. One coaching standard.
+        - heading "Six trainers. Zero guesswork." [level=2] [ref=e452]:
+          - generic [ref=e453]: Six
+          - generic [ref=e455]: trainers.
+          - generic [ref=e457]: Zero
+          - generic [ref=e459]: guesswork.
+      - article [ref=e461]:
+        - generic [ref=e466]:
+          - img "Mohammed Wajeed, Fitness Guru and Mr Nizamabad titleholder" [ref=e467]
+          - generic: "01"
+          - paragraph [ref=e470]: Fitness Guru
+        - generic [ref=e471]:
+          - heading "Mohammed Wajeed" [level=3] [ref=e472]
+          - paragraph [ref=e476]: Fitness Guru
+          - generic [ref=e477]: Fitness Coaching
+          - generic [ref=e481]:
+            - term [ref=e482]: Focus
+            - definition [ref=e483]: Fitness Coaching
+          - generic [ref=e484]: Mr Nizamabad
+          - link "Book a session with Mohammed Wajeed, Fitness Guru" [ref=e487] [cursor=pointer]:
+            - /url: /#free-trial
+            - text: Book a session
+      - generic [ref=e492]:
+        - generic [ref=e493]:
+          - link "Book a session with Dhanveer Prakash, Nutritionist & Fitness Trainer" [ref=e496] [cursor=pointer]:
+            - /url: /#free-trial
+            - generic [ref=e498]:
+              - img "Dhanveer Prakash, Nutritionist and Fitness Trainer" [ref=e499]
+              - generic: "02"
+              - generic [ref=e500]:
+                - generic [ref=e501]:
+                  - heading "Dhanveer Prakash" [level=3] [ref=e502]
+                  - paragraph [ref=e506]: Nutritionist & Fitness Trainer
+                - generic [ref=e507]:
+                  - generic [ref=e508]: Nutrition
+                  - generic [ref=e510]: Personal Training
+              - generic: Book a session
+          - link "Book a session with Mohammed Yousuf, Personal Trainer & Fitness Counsellor" [ref=e514] [cursor=pointer]:
+            - /url: /#free-trial
+            - generic [ref=e516]:
+              - img "Mohammed Yousuf, Personal Trainer and Fitness Counsellor" [ref=e517]
+              - generic: "03"
+              - generic [ref=e518]:
+                - generic [ref=e519]:
+                  - heading "Mohammed Yousuf" [level=3] [ref=e520]
+                  - paragraph [ref=e524]: Personal Trainer & Fitness Counsellor
+                - generic [ref=e525]:
+                  - generic [ref=e526]: Personal Training
+                  - generic [ref=e528]: Fitness Counselling
+              - generic: Book a session
+          - link "Book a session with Mohiuddin Ahmed, General & Personal Trainer" [ref=e532] [cursor=pointer]:
+            - /url: /#free-trial
+            - generic [ref=e534]:
+              - img "Mohiuddin Ahmed, General and Personal Trainer" [ref=e535]
+              - generic: "04"
+              - generic [ref=e536]:
+                - generic [ref=e537]:
+                  - heading "Mohiuddin Ahmed" [level=3] [ref=e538]
+                  - paragraph [ref=e542]: General & Personal Trainer
+                - generic [ref=e543]:
+                  - generic [ref=e544]: General Training
+                  - generic [ref=e546]: Personal Training
+              - generic: Book a session
+          - link "Book a session with Anuradh Aleti, CrossFit & Personal Trainer" [ref=e550] [cursor=pointer]:
+            - /url: /#free-trial
+            - generic [ref=e552]:
+              - img "Anuradh Aleti, CrossFit and Personal Trainer" [ref=e553]
+              - generic: "05"
+              - generic [ref=e554]:
+                - generic [ref=e555]:
+                  - heading "Anuradh Aleti" [level=3] [ref=e556]
+                  - paragraph [ref=e560]: CrossFit & Personal Trainer
+                - generic [ref=e561]:
+                  - generic [ref=e562]: CrossFit
+                  - generic [ref=e564]: Personal Training
+              - generic: Book a session
+          - link "Book a session with Ruma Mehar, Professional Fitness & Weight Loss Trainer" [ref=e568] [cursor=pointer]:
+            - /url: /#free-trial
+            - generic [ref=e570]:
+              - img "Ruma Mehar, Professional Fitness and Weight Loss Trainer" [ref=e571]
+              - generic: "06"
+              - generic [ref=e572]:
+                - generic [ref=e573]:
+                  - heading "Ruma Mehar" [level=3] [ref=e574]
+                  - paragraph [ref=e578]: Professional Fitness & Weight Loss Trainer
+                - generic [ref=e579]:
+                  - generic [ref=e580]: Fitness Training
+                  - generic [ref=e582]: Weight Loss
+              - generic: Book a session
+          - generic [ref=e587]:
+            - paragraph [ref=e588]: Not sure who to train with?
+            - paragraph [ref=e589]: Book a session and train with the coach who fits your goal.
+            - link "Book a trial session" [ref=e590] [cursor=pointer]:
+              - /url: /#free-trial
+        - group "Trainers" [ref=e592]:
+          - paragraph [ref=e593]:
+            - text: "01"
+            - generic [ref=e594]: / 06
+          - generic [ref=e595]:
+            - button "Go to card 1" [ref=e596]
+            - button "Go to card 2" [ref=e598]
+            - button "Go to card 3" [ref=e600]
+            - button "Go to card 4" [ref=e602]
+            - button "Go to card 5" [ref=e604]
+            - button "Go to card 6" [ref=e606]
+          - generic [ref=e608]: Card 1 of 6
+          - generic [ref=e609]:
+            - button "Previous card" [disabled]
+            - button "Next card" [ref=e610] [cursor=pointer]
+      - generic [ref=e615]:
+        - paragraph [ref=e616]: 6 coaches
+        - link "See all coaches" [ref=e617] [cursor=pointer]:
+          - /url: /trainers
+    - generic [ref=e622]:
+      - generic [ref=e623]:
+        - generic [ref=e624]:
+          - paragraph [ref=e626]: Real Results
+          - heading "Real people. Real numbers." [level=2] [ref=e628]
+        - generic [ref=e629]:
+          - generic [ref=e630]:
+            - generic [ref=e633]:
+              - generic [ref=e634]: 10 KG
+              - generic [ref=e635]: IN 3 MONTHS
+            - figure "Lalith Prabhakar" [ref=e638]:
+              - blockquote [ref=e639]:
+                - paragraph [ref=e640]: 10 kg and counting — that's the weight I've lost in 3 months. I was trained by the morning trainer, who took the time to build a diet plan based on my BMI.
+          - generic [ref=e656]:
+            - figure "Samba Sai Kumar" [ref=e658]:
+              - blockquote [ref=e659]:
+                - paragraph [ref=e660]: Gym equipment, cleanliness — all of it is awesome. Our morning and evening coaches are super trainers. I've been working out here for the past two years.
+            - generic [ref=e676]:
+              - generic [ref=e677]: 2 YEARS
+              - generic [ref=e678]: MEMBER
+      - generic [ref=e682]:
+        - generic [ref=e684]:
+          - generic [ref=e685]: "01"
+          - paragraph [ref=e690]: Professional and well-spoken staff. All the equipment is too good and well maintained. Plus, there's a separate floor for crossfit. Best place to workout.
+          - generic [ref=e691]: Zubair Ali
+        - generic [ref=e705]:
+          - generic [ref=e706]: "02"
+          - paragraph [ref=e711]: Amazing experience with the trainer. The gym is complete with a small café that has an appetising menu.
+          - generic [ref=e712]: Syed Zohaib
+        - generic [ref=e726]:
+          - generic [ref=e727]: "03"
+          - paragraph [ref=e732]: Best place in Hyderabad to tone your body. Reasonable fee structure and good guidance from the trainer, with special diet plans provided.
+          - generic [ref=e733]: Srinjoy Kar
+        - generic [ref=e747]:
+          - generic [ref=e748]: "04"
+          - paragraph [ref=e753]: Best in its class — well spaced, with modern equipment. The owner and management are genuinely friendly.
+          - generic [ref=e754]: Tarun Pande
+        - generic [ref=e768]:
+          - generic [ref=e769]: "05"
+          - paragraph [ref=e774]: Clean, well run, and they maintained real precautionary measures against COVID.
+          - generic [ref=e775]: Rupesh Deshmukh
+      - link "Book Your Free Trial" [ref=e792] [cursor=pointer]:
+        - /url: /#free-trial
+    - generic [ref=e796]:
+      - generic [ref=e797]:
+        - paragraph [ref=e798]: Membership
+        - heading "Pick your pace. Not your poison." [level=2] [ref=e799]
+        - paragraph [ref=e800]: No hidden fees, no surprise add-ons — just a straightforward plan that fits how often you train.
+      - generic [ref=e801]:
+        - generic [ref=e803]:
+          - paragraph [ref=e804]: Daily
+          - paragraph [ref=e805]: ₹199
+        - generic [ref=e807]:
+          - paragraph [ref=e808]: Monthly
+          - paragraph [ref=e809]: ₹1,999
+          - paragraph [ref=e810]: ₹2,799
+        - generic [ref=e812]:
+          - generic [ref=e813]: Best Seller
+          - paragraph [ref=e814]: Yearly
+          - paragraph [ref=e815]: ₹9,499
+          - paragraph [ref=e816]: ₹15,999
+      - link "See Full Membership Plans" [ref=e818] [cursor=pointer]:
+        - /url: /pricing
+    - generic [ref=e822]:
+      - generic [ref=e823]:
+        - paragraph [ref=e824]: Two Locations
+        - heading "Two gyms. One standard." [level=2] [ref=e825]
+      - generic [ref=e826]:
+        - generic [ref=e828]:
+          - img "Infiniti Fitness Gachibowli training floor" [ref=e830]
+          - generic [ref=e831]:
+            - heading "Gachibowli" [level=3] [ref=e833]
+            - paragraph [ref=e838]: City Pearl, Gachibowli Road, Vinayak Nagar, Indira Nagar, Near HDFC Bank, Gachibowli, Hyderabad, Telangana, 500032
+            - paragraph [ref=e843]: Monday to Saturday · 6:00 AM–11:00 AM & 5:00 PM–10:00 PM
+            - link "View Gachibowli Details" [ref=e844] [cursor=pointer]:
+              - /url: /locations/gachibowli
+        - generic [ref=e847]:
+          - img "Infiniti Fitness Rethibowli training floor" [ref=e849]
+          - generic [ref=e850]:
+            - generic [ref=e851]:
+              - heading "Rethibowli" [level=3] [ref=e852]
+              - generic [ref=e853]: Ladies Only · 12:00 PM–4:00 PM
+            - paragraph [ref=e858]: Hyder Plaza, Pillar No. 53, Rethibowli, Hyderabad - 500028, Telangana, India
+            - paragraph [ref=e863]: Monday to Saturday · 6:00 AM–11:00 AM & 5:00 PM–10:00 PM
+            - link "View Rethibowli Details" [ref=e864] [cursor=pointer]:
+              - /url: /locations/rethibowli
+    - generic [ref=e868]:
+      - generic [ref=e869]:
+        - paragraph [ref=e870]: Questions
+        - heading "Frequently asked questions" [level=2] [ref=e871]
+      - generic [ref=e873]:
+        - heading [level=3] [ref=e875]:
+          - button "How do I join Infiniti Fitness?" [ref=e876]
+        - heading [level=3] [ref=e881]:
+          - button "Can I try before I commit?" [ref=e882]
+        - heading [level=3] [ref=e887]:
+          - button "Is there a minimum age to join?" [ref=e888]
+        - heading [level=3] [ref=e893]:
+          - button "Can I transfer my membership to someone else?" [ref=e894]
+        - heading [level=3] [ref=e899]:
+          - button "What payment methods do you accept?" [ref=e900]
+        - heading [level=3] [ref=e905]:
+          - button "Do you have lockers and a changing room?" [ref=e906]
+    - generic [ref=e912]:
+      - heading "Commit to health and fitness." [level=2] [ref=e914]
+      - paragraph [ref=e916]: Challenge yourself. Take it to the next level.
+      - generic [ref=e918]:
+        - link "Book Free Trial" [ref=e919] [cursor=pointer]:
+          - /url: /#free-trial
+        - link "View Membership Plans" [ref=e921] [cursor=pointer]:
+          - /url: /pricing
+        - link "Message Us on WhatsApp" [ref=e923] [cursor=pointer]:
+          - /url: https://wa.me/919703573111
+  - contentinfo [ref=e925]:
+    - generic [ref=e926]:
+      - generic [ref=e927]:
+        - generic [ref=e928]:
+          - generic [ref=e929]:
+            - paragraph [ref=e930]: Wanna Try Before You Buy?
+            - heading "Sign Up for a Free Trial" [level=2] [ref=e931]
+          - generic [ref=e933]:
+            - generic [ref=e934]:
+              - generic [ref=e935]:
+                - generic [ref=e936]: Full Name
+                - textbox "Full Name" [ref=e937]
+              - generic [ref=e938]:
+                - generic [ref=e939]: Phone Number
+                - textbox "Phone Number" [ref=e940]
+            - generic [ref=e941]:
+              - generic [ref=e942]: Email
+              - textbox "Email" [ref=e943]
+            - generic [ref=e944]:
+              - generic [ref=e945]:
+                - generic [ref=e946]: Branch
+                - combobox "Branch" [ref=e947]:
+                  - option "Select a branch" [selected]
+                  - option "Gachibowli"
+                  - option "Rethibowli"
+              - generic [ref=e948]:
+                - generic [ref=e949]: Preferred Day
+                - textbox "Preferred Day" [ref=e950]
+            - group "Preferred Time" [ref=e951]:
+              - generic [ref=e953]:
+                - generic [ref=e954]:
+                  - checkbox "Morning (6AM–11AM)" [ref=e955]
+                  - generic [ref=e956]: Morning (6AM–11AM)
+                - generic [ref=e957]:
+                  - checkbox "Evening (5PM–10PM)" [ref=e958]
+                  - generic [ref=e959]: Evening (5PM–10PM)
+            - button "Book Free Trial" [ref=e960]
+        - generic [ref=e961]:
+          - generic [ref=e962]:
+            - heading "Gachibowli" [level=3] [ref=e963]
+            - paragraph [ref=e968]: City Pearl, Gachibowli Road, Vinayak Nagar, Indira Nagar, Near HDFC Bank, Gachibowli, Hyderabad, Telangana, 500032
+            - paragraph [ref=e973]: Monday to Saturday · 6:00 AM–11:00 AM & 5:00 PM–10:00 PM
+          - generic [ref=e974]:
+            - heading "Rethibowli" [level=3] [ref=e975]
+            - paragraph [ref=e980]: Hyder Plaza, Pillar No. 53, Rethibowli, Hyderabad - 500028, Telangana, India
+            - paragraph [ref=e985]: Monday to Saturday · 6:00 AM–11:00 AM & 5:00 PM–10:00 PMLadies Only · 12:00 PM–4:00 PM
+      - generic [ref=e986]:
+        - generic [ref=e987]:
+          - heading "Explore" [level=3] [ref=e988]
+          - navigation "Footer" [ref=e989]:
+            - list [ref=e990]:
+              - listitem [ref=e991]:
+                - link "Programs" [ref=e992] [cursor=pointer]:
+                  - /url: /programs
+              - listitem [ref=e993]:
+                - link "Locations" [ref=e994] [cursor=pointer]:
+                  - /url: /locations
+              - listitem [ref=e995]:
+                - link "Trainers" [ref=e996] [cursor=pointer]:
+                  - /url: /trainers
+              - listitem [ref=e997]:
+                - link "Pricing" [ref=e998] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e999]:
+                - link "About" [ref=e1000] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e1001]:
+                - link "Contact" [ref=e1002] [cursor=pointer]:
+                  - /url: /contact
+        - generic [ref=e1003]:
+          - heading "Contact" [level=3] [ref=e1004]
+          - link "+91 97035 73111" [ref=e1005] [cursor=pointer]:
+            - /url: tel:+919703573111
+          - link "info@infinitifitness.in" [ref=e1008] [cursor=pointer]:
+            - /url: mailto:info@infinitifitness.in
+        - generic [ref=e1012]:
+          - img "Infiniti Fitness" [ref=e1013]
+          - paragraph [ref=e1014]: Advanced | Comfortable | Economical
+      - paragraph [ref=e1016]: © 2026 Infiniti Fitness. All rights reserved.
+  - generic [ref=e1018]:
+    - link "Call" [ref=e1019] [cursor=pointer]:
+      - /url: tel:+919703573111
+    - link "WhatsApp" [ref=e1023] [cursor=pointer]:
+      - /url: https://wa.me/919703573111
+    - link "Free Trial" [ref=e1027] [cursor=pointer]:
+      - /url: /#free-trial
