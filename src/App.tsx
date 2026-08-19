@@ -99,7 +99,7 @@ function AppButton({
   children: ReactNode;
   onClick?: () => void;
   href?: string;
-  variant?: "dark" | "light" | "ghost";
+  variant?: "dark" | "light" | "ghost" | "primary";
   className?: string;
   type?: "button" | "submit";
 }) {
@@ -176,7 +176,7 @@ function Navbar({ onBook }: { onBook: () => void }) {
             </a>
           ))}
         </nav>
-        <AppButton onClick={onBook} variant={scrolled ? "dark" : "light"}>
+        <AppButton onClick={onBook} variant="primary">
           Book Appointment
         </AppButton>
         <button
@@ -270,7 +270,7 @@ function Hero({ onBook }: { onBook: () => void }) {
             </div>
           </div>
           <div className="hero-actions">
-            <AppButton onClick={onBook} variant="light">
+            <AppButton onClick={onBook} variant="primary">
               Book an Appointment <ArrowRight size={15} />
             </AppButton>
             <AppButton href={telPhone} variant="ghost">
@@ -1380,7 +1380,7 @@ function FinalCta({ onBook }: { onBook: () => void }) {
       </h2>
       <p>Appointments begin with a conversation.</p>
       <div className="final-actions">
-        <AppButton onClick={onBook} variant="light">
+        <AppButton onClick={onBook} variant="primary">
           Book an Appointment <ArrowRight size={14} />
         </AppButton>
         <AppButton href={telPhone} variant="ghost">
@@ -1398,12 +1398,14 @@ function Footer() {
         <div className="footer-top">
           <div>
             <a className="brand" href="#home" data-testid="link-footer-brand">
-              <span className="brand-mark" />
-              <span className="brand-word">
-                NEODENT
-                <br />
-                DENTAL HOSPITALS
-              </span>
+<span className="brand-logo-wrap">
+            <img className="brand-logo" src={officialLogo} alt="Neodent Dental Hospitals" />
+          </span>
+          <span className="brand-word">
+            NEODENT
+            <br />
+            DENTAL HOSPITALS
+          </span>
             </a>
             <p className="footer-tag">
               Expert dental care in Hyderabad, presented with clarity and care.
@@ -1468,7 +1470,7 @@ function FloatingCta({ onBook }: { onBook: () => void }) {
         <MessageCircle size={22} strokeWidth={2} />
         <span className="floating-cta-tooltip">Chat on WhatsApp</span>
       </a>
-      <AppButton onClick={onBook} variant="dark" className="floating-cta-book">
+      <AppButton onClick={onBook} variant="primary" className="floating-cta-book">
         Book Appointment
       </AppButton>
     </div>
@@ -1663,7 +1665,7 @@ function LeadCapture({
           <span>Open today, 04:00 PM – 09:00 PM</span>
         </div>
         <div className="lead-actions">
-          <AppButton onClick={onBook} variant="light">
+          <AppButton onClick={onBook} variant="primary">
             Book an Appointment <ArrowRight size={14} />
           </AppButton>
           <AppButton href={telPhone} variant="ghost">
@@ -2285,7 +2287,7 @@ function Home() {
         <AppButton href={telPhone} variant="ghost">
           <Phone size={14} /> Call
         </AppButton>
-        <AppButton onClick={() => setAppointmentOpen(true)} variant="light">
+        <AppButton onClick={() => setAppointmentOpen(true)} variant="primary">
           Book Appointment <ArrowRight size={14} />
         </AppButton>
       </div>

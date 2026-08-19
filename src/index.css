@@ -3,17 +3,29 @@
 @import "tw-animate-css";
 
 :root {
-  --ink: #263033;
-  --ink-deep: #161c1e;
-  --teal: #078b58;
-  --ivory: #f8f6ef;
-  --paper: #fffefa;
-  --sage: #d9eee2;
-  --sage-deep: #16895c;
-  --champagne: #d71920;
-  --clay: #c51b25;
-  --line: rgba(38, 48, 51, 0.16);
-  --muted: #657173;
+  --neodent-red: #d71920;
+  --neodent-red-dark: #b5121a;
+  --neodent-red-soft: #f8e3e2;
+  --neodent-green: #16895c;
+  --neodent-green-dark: #0d6845;
+  --neodent-green-soft: #e3f1e8;
+  --neodent-ink: #263033;
+  --neodent-charcoal: #161c1e;
+  --neodent-muted: #657173;
+  --neodent-ivory: #f8f6ef;
+  --neodent-surface: #fffefa;
+  --neodent-border: rgba(38, 48, 51, 0.16);
+  --ink: var(--neodent-ink);
+  --ink-deep: var(--neodent-charcoal);
+  --teal: var(--neodent-green);
+  --ivory: var(--neodent-ivory);
+  --paper: var(--neodent-surface);
+  --sage: var(--neodent-green-soft);
+  --sage-deep: var(--neodent-green);
+  --champagne: var(--neodent-red);
+  --clay: var(--neodent-red-dark);
+  --line: var(--neodent-border);
+  --muted: var(--neodent-muted);
   --background: 48 33% 95%;
   --foreground: 195 13% 17%;
   --border: 48 18% 84%;
@@ -255,6 +267,19 @@ button {
 .button:hover {
   box-shadow: 0 4px 16px rgba(24, 57, 59, 0.12);
 }
+.button-primary {
+  background: var(--neodent-red);
+  color: var(--neodent-surface);
+  box-shadow: 0 4px 14px rgba(183, 18, 26, 0.16);
+}
+.button-primary:hover {
+  background: var(--neodent-red-dark);
+  box-shadow: 0 6px 18px rgba(183, 18, 26, 0.2);
+  transform: translateY(-1px);
+}
+.button-primary:focus-visible {
+  outline-color: var(--neodent-red);
+}
 .button-dark {
   background: var(--ink);
   color: var(--paper);
@@ -381,10 +406,10 @@ button {
   background: linear-gradient(
     90deg,
     var(--ink-deep) 0%,
-    rgba(16, 45, 48, 0.72) 12%,
-    rgba(16, 45, 48, 0.15) 48%,
-    rgba(16, 45, 48, 0.08) 72%,
-    rgba(16, 45, 48, 0.18)
+    rgba(22, 28, 30, 0.72) 12%,
+    rgba(22, 28, 30, 0.15) 48%,
+    rgba(22, 28, 30, 0.08) 72%,
+    rgba(22, 28, 30, 0.18)
   );
 }
 .hero-image img {
@@ -478,7 +503,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  background: rgba(16, 45, 48, 0.62);
+  background:     rgba(22, 28, 30, 0.62);
   border: 1px solid rgba(251, 250, 247, 0.14);
   border-radius: 3px;
   padding: 18px 24px;
@@ -3709,7 +3734,7 @@ button {
   border-radius: 2px;
   scroll-snap-align: start;
   box-shadow:
-    0 2px 8px rgba(16, 45, 48, 0.08),
+    0 2px 8px rgba(22, 28, 30, 0.08),
     0 8px 24px rgba(16, 45, 48, 0.06),
     0 0 0 1px rgba(16, 45, 48, 0.04);
   transform: translateY(25px) scale(0.97);
@@ -3744,7 +3769,7 @@ button {
   content: "";
   position: absolute;
   inset: 12px;
-  border: 1px solid rgba(16, 45, 48, 0.08);
+  border: 1px solid rgba(22, 28, 30, 0.08);
   z-index: 2;
   transition: border-color 0.4s ease;
   pointer-events: none;
@@ -3853,7 +3878,7 @@ button {
 .gallery-item:focus-visible {
   outline: 2px solid var(--teal);
   outline-offset: 4px;
-  box-shadow: 0 8px 32px rgba(16, 45, 48, 0.15);
+  box-shadow: 0 8px 32px rgba(22, 28, 30, 0.15);
 }
 
 .gallery-item:focus-visible::before {
@@ -3901,7 +3926,7 @@ button {
   height: 48px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(16, 45, 48, 0.08);
+  border: 1px solid rgba(22, 28, 30, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3920,7 +3945,7 @@ button {
   border-color: rgba(16, 45, 48, 0.12);
   transform: scale(1.05);
   box-shadow:
-    0 4px 12px rgba(16, 45, 48, 0.08),
+    0 4px 12px rgba(22, 28, 30, 0.08),
     0 12px 32px rgba(16, 45, 48, 0.06),
     0 0 0 1px rgba(255, 255, 255, 0.8);
 }
@@ -3959,7 +3984,7 @@ button {
   transform: translateX(-50%);
   width: 200px;
   height: 3px;
-  background: rgba(16, 45, 48, 0.08);
+  background: rgba(22, 28, 30, 0.08);
   border-radius: 2px;
   overflow: hidden;
   z-index: 10;
@@ -5005,7 +5030,7 @@ button {
   color: var(--paper);
   box-shadow:
     0 10px 24px rgba(16, 45, 48, 0.28),
-    0 2px 8px rgba(16, 45, 48, 0.18);
+    0 2px 8px rgba(22, 28, 30, 0.18);
   transition:
     background 0.25s ease,
     box-shadow 0.25s ease,
@@ -5594,7 +5619,7 @@ button {
   }
   .hero-image::after {
     background:
-      linear-gradient(0deg, var(--ink-deep) 0%, rgba(16, 45, 48, 0.15) 58%),
+      linear-gradient(0deg, var(--ink-deep) 0%, rgba(22, 28, 30, 0.15) 58%),
       linear-gradient(90deg, rgba(16, 45, 48, 0.52), transparent 65%);
   }
   .hero-content {
@@ -5951,7 +5976,7 @@ button {
     width: 40px;
     height: 40px;
     box-shadow:
-      0 2px 6px rgba(16, 45, 48, 0.08),
+      0 2px 6px rgba(22, 28, 30, 0.08),
       0 6px 16px rgba(16, 45, 48, 0.05),
       0 0 0 1px rgba(255, 255, 255, 0.5);
   }
@@ -6035,7 +6060,7 @@ button {
     right: 0;
     background: var(--ink-deep);
     padding: 9px 10px calc(9px + env(safe-area-inset-bottom));
-    box-shadow: 0 -8px 24px rgba(16, 45, 48, 0.15);
+    box-shadow: 0 -8px 24px rgba(22, 28, 30, 0.15);
   }
   .mobile-bar .button {
     min-height: 43px;
