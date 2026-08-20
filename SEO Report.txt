@@ -1,0 +1,227 @@
+NEODENT DENTAL HOSPITALS — SEO CODE AUDIT
+Scope: index.html, src/App.tsx, src/main.tsx, src/index.css, vite.config.ts,
+vercel.json, public/robots.txt, dist/ build output.
+Method: Static code inspection + inspection of the actual production build
+output in /dist. No live crawl of the deployed domain was performed, so
+anything about live indexing status (Search Console, actual rankings) is
+NOT covered here — this is a code-level audit only.
+
+--------------------------------------------------------------------------
+OVERALL SEO RATING: 5 / 10
+--------------------------------------------------------------------------
+
+This is not a bad build — the fundamentals that a developer usually
+forgets (title, meta description, one clear H1, alt text, semantic HTML)
+are actually in place. But several things a professional SEO-aware build
+should ship with day one are missing entirely, and the site's core
+architecture (a single one-page React SPA with client-side rendering only)
+puts a hard ceiling on how far it can rank for anything beyond its own
+brand name. Half the marks are earned by decent on-page hygiene; the rest
+are lost to missing technical SEO infrastructure and a content/URL
+strategy that can't compete for more than one search query.
+
+--------------------------------------------------------------------------
+WHAT'S ACTUALLY DONE WELL
+--------------------------------------------------------------------------
+
+1. Title & meta description [`index.html:6-7`](index.html:6) are present,
+   unique, keyword-relevant ("Expert Dental Care in Hyderabad") and within
+   safe length limits.
+
+2. `meta name="robots" content="index, follow"` is explicitly set
+   [`index.html:8`](index.html:8) — no accidental noindex.
+
+3. Basic Open Graph and Twitter Card tags exist
+   [`index.html:9-14`](index.html:9).
+
+4. A JSON-LD `Dentist` schema block is present
+   [`index.html:16-32`](index.html:16) with name, phone, address and
+   opening hours — most single-page brochure sites skip this entirely.
+
+5. Real heading hierarchy, not div soup: one `<h1>` in the hero
+   [`src/App.tsx:239`](src/App.tsx:239), `<h2>` per section, `<h3>` for
+   sub-items. Sections are wrapped in semantic `<section>`,
+   `<header>`, `<nav>`, `<main>`, `<footer>`, and the contact block
+   correctly uses `<dl>/<dt>/<dd>` [`src/App.tsx:1293`](src/App.tsx:1293)
+   instead of generic divs.
+
+6. Every content `<img>` has descriptive, specific alt text (not
+   "image1.jpg" or empty alt) — e.g.
+   [`src/App.tsx:1139`](src/App.tsx:1139),
+   [`src/App.tsx:1904`](src/App.tsx:1904). Below-the-fold images use
+   `loading="lazy"` consistently.
+
+7. External link to WhatsApp correctly uses
+   `rel="noopener noreferrer"` [`src/App.tsx:1457`](src/App.tsx:1457).
+
+8. `robots.txt` exists and doesn't block anything
+   [`public/robots.txt:1`](public/robots.txt:1).
+
+--------------------------------------------------------------------------
+CRITICAL GAPS (fix these first)
+--------------------------------------------------------------------------
+
+1. NO CANONICAL TAG.
+   There is no `<link rel="canonical">` anywhere in
+   [`index.html`](index.html:1). Without it, Google is left to guess
+   the preferred URL (www vs non-www, trailing slash, etc.). This is a
+   two-line fix and there's no reason it's missing.
+
+2. NO SITEMAP.
+   `public/robots.txt` has no `Sitemap:` line and there is no
+   `sitemap.xml` anywhere in `public/`. For a one-page site the impact
+   is small, but it's a five-minute fix with zero downside.
+
+3. MISSING og:image / twitter:image / og:url / og:site_name.
+   [`index.html:9-14`](index.html:9) has titles and descriptions for
+   social sharing but no image. Given this business will realistically
+   get shared via WhatsApp (there's literally a WhatsApp CTA built into
+   the site [`src/App.tsx:1455`](src/App.tsx:1455)), every shared link
+   currently renders as a bare text card with no clinic photo — that's
+   a real, measurable loss of click-through on the exact channel this
+   site is designed to drive.
+
+4. STRUCTURED DATA IS INCOMPLETE FOR WHAT'S ALREADY ON THE PAGE.
+   The `Dentist` schema [`index.html:16-32`](index.html:16) is missing:
+   - `image` and `url`
+   - `geo` (latitude/longitude) — this materially helps local map pack
+     visibility
+   - `priceRange`
+   - `aggregateRating` — the page visibly displays "4.3 · 259 Google
+     reviews" [`src/App.tsx:233-237`](src/App.tsx:233) but this rating
+     is never expressed in the schema, so it's not eligible for a
+     rich-result star rating in search.
+   - `postalCode` in the address block
+   - `sameAs` (links to the clinic's Google Business Profile / social
+     profiles, if they exist)
+
+5. RENDER-BLOCKING FONT LOADING WITH NO PRECONNECT.
+   Google Fonts is pulled in via `@import` at the very top of
+   [`src/index.css:1`](src/index.css:1). `@import` in CSS is
+   render-blocking and there is no `<link rel="preconnect">` to
+   `fonts.googleapis.com` / `fonts.gstatic.com` in `index.html`. This
+   directly delays First Contentful Paint / Largest Contentful Paint,
+   both of which are Core Web Vitals and a confirmed ranking factor.
+
+6. POSSIBLE BUILD/DEPLOY OUTPUT MISMATCH.
+   [`vite.config.ts:17-19`](vite.config.ts:17) builds to `dist/`.
+   [`vercel.json:2`](vercel.json:2) sets `"outputDirectory": "dist/public"`.
+   These don't match — there is no `dist/public` folder produced by the
+   build (confirmed by inspecting the actual build output). If this
+   project is genuinely deployed on Vercel with this config, Vercel
+   would fail to find the expected output directory and either fail
+   the deploy or serve a stale build — which would mean none of the
+   above metadata is even reaching production. I have not verified the
+   live Vercel deployment, so I can't confirm this is actively broken,
+   but the config as written in this repo does not match the actual
+   build output and should be checked immediately.
+
+--------------------------------------------------------------------------
+ARCHITECTURAL ISSUE (bigger conversation, not a quick fix)
+--------------------------------------------------------------------------
+
+This is a single React SPA route — [`src/App.tsx:2337-2339`](src/App.tsx:2337)
+shows exactly one real route (`/`) plus a catch-all 404. There is no
+server-side rendering or static pre-rendering: the initial HTML shipped
+to a crawler is just `<div id="root"></div>`
+[`index.html:35`](index.html:35), and all content (including the H1,
+meta-relevant copy, and structured data displayed on page) is injected by
+client-side JavaScript after the ~321KB JS bundle loads and executes.
+Modern Googlebot does render JS, but:
+- it costs you a second rendering pass in the indexing pipeline
+  (slower, less reliable discovery of updates),
+- and — more importantly — there is only ONE indexable URL for the
+  entire business. Real treatment focus areas ("Prosthodontics",
+  "Implantology") are mentioned as text inside one page, not as their
+  own crawlable, linkable pages. That means the site can only ever
+  meaningfully compete for one query cluster ("Neodent" / generic
+  "dentist Hyderabad" brand terms) and has no ability to rank for
+  specific, high-intent local searches like "dental implants Humayun
+  Nagar" or "prosthodontist Hyderabad" as separate landing pages.
+This is a strategic decision, not a bug, but it is the single biggest
+ceiling on this site's organic search potential and should be called out
+plainly.
+
+--------------------------------------------------------------------------
+MODERATE ISSUES
+--------------------------------------------------------------------------
+
+1. No `fetchpriority="high"` (or any preload) on the hero/LCP image
+   [`src/App.tsx:214-217`](src/App.tsx:214). This is almost certainly the
+   Largest Contentful Paint element on the page and it isn't prioritized.
+
+2. JS bundle is 321.5 KB / CSS is 166.5 KB for what is functionally a
+   single static marketing page with a couple of modals (confirmed from
+   `dist/assets`). `@tanstack/react-query` is included as a dependency
+   [`package.json:13`](package.json:13) for a page that has no actual
+   data-fetching — that's dead weight shipped to every visitor.
+
+3. `maximum-scale=1` in the viewport meta
+   [`index.html:5`](index.html:5) prevents pinch-to-zoom. Not an SEO
+   ranking factor directly, but it's a usability/accessibility flag
+   (WCAG 1.4.4) that can indirectly hurt engagement signals.
+
+4. No `manifest.json` / theme-color meta — minor, mostly a PWA/mobile
+   polish item rather than a ranking factor.
+
+--------------------------------------------------------------------------
+MINOR HYGIENE ISSUES
+--------------------------------------------------------------------------
+
+1. `public/attached_assets/` contains a large amount of unused/duplicate
+   source imagery and a 1.4MB video (`nampally hospital tour.mp4`) and a
+   1MB screenshot PNG (`FireShot_Capture_002...png`) that are not
+   referenced anywhere in `src/App.tsx` (confirmed by search) but still
+   get copied into every production build (`dist/attached_assets/...`).
+   They don't hurt rankings directly, but they bloat the deployed
+   artifact and hosting bandwidth for no benefit — worth pruning.
+
+2. No FAQ content or `FAQPage` schema anywhere. For a local healthcare
+   business, a genuine, real FAQ section (actual clinic policies/hours/
+   procedures — not invented claims) is one of the highest-leverage,
+   lowest-effort additions for earning extra visibility in search
+   results. Flagging as an opportunity, not fabricating content for it.
+
+--------------------------------------------------------------------------
+PRIORITIZED FIX LIST
+--------------------------------------------------------------------------
+
+Do immediately (all under an hour of work, no design risk):
+  1. Add `<link rel="canonical" href="...">` to index.html.
+  2. Add `og:image`, `og:url`, `og:site_name`, `twitter:image`.
+  3. Add `geo`, `image`, `url`, `priceRange`, `postalCode`, and
+     `aggregateRating` to the JSON-LD block.
+  4. Add `<link rel="preconnect">` for the Google Fonts domains, or
+     self-host the two font files.
+  5. Add a `sitemap.xml` and reference it from `robots.txt`.
+  6. Verify/fix the `vercel.json` outputDirectory against the real
+     Vite `dist` output.
+  7. Add `fetchpriority="high"` to the hero image.
+
+Do soon (requires a little more thought/content):
+  8. Remove or lazy-justify `@tanstack/react-query` if it's unused.
+  9. Prune unused files in `public/attached_assets/`.
+  10. Decide whether treatment-specific content (Implantology,
+      Prosthodontics) deserves its own indexable page/section with a
+      real heading and URL fragment strategy, or stays as-is by
+      deliberate choice.
+
+Longer-term (strategic):
+  11. Consider a real FAQ section with genuine clinic Q&A and
+      `FAQPage` schema.
+  12. Consider whether the business has other locations/services that
+      justify additional indexable pages rather than one single page.
+
+--------------------------------------------------------------------------
+BOTTOM LINE
+--------------------------------------------------------------------------
+
+The code shows someone who cared about the basics — heading structure,
+alt text, a JSON-LD block, semantic HTML — which already puts it ahead
+of a lot of AI-generated marketing sites. But "basics done" and
+"SEO-ready" are different bars. Right now this site is optimized to be
+found by people who already know its name, not by people searching for
+what it does. 5/10 reflects solid on-page hygiene held back by missing
+technical infrastructure (canonical, sitemap, complete structured data,
+social preview image) and a single-URL architecture that caps its
+organic reach.

@@ -1,0 +1,1355 @@
+# NEODENT DENTAL HOSPITALS
+
+## Premium Single-Page Website — Master Build Specification
+
+You are acting as a combination of:
+
+* Senior Product Designer
+* Senior UX/UI Designer
+* Creative Director
+* Senior Next.js Engineer
+* Frontend Architect
+* Conversion-Focused Healthcare Web Designer
+
+Build a **premium, modern, high-conversion, single-page website** for:
+
+# Neodent Dental Hospitals
+
+The current online presence is a basic GoDaddy website. Your job is to replace that experience with a polished website that feels like it was designed and developed by a high-end digital agency.
+
+The finished website should feel:
+
+**Premium + Human + Trustworthy + Sophisticated + Clinical + Warm + Modern**
+
+It must NOT feel:
+
+**Template-like + Generic + Overly Medical + SaaS-like + AI-generated + Over-animated**
+
+---
+
+# 1. PRIMARY OBJECTIVE
+
+The website has one primary job:
+
+Turn a first-time visitor into a potential dental patient.
+
+The visitor should quickly understand:
+
+1. What Neodent Dental Hospitals is
+2. Where it is located
+3. What kind of dental care it provides
+4. Who the dental professional is
+5. What the clinic environment looks like
+6. Why the clinic feels trustworthy
+7. How to call or book an appointment
+
+Design the experience around this progression:
+
+**Discover → Trust → Explore → Feel Comfortable → Book**
+
+Do not add sections simply because a typical dental website has them.
+
+Every section must have a purpose.
+
+If a section does not materially improve:
+
+* trust
+* understanding
+* storytelling
+* usability
+* or conversion
+
+remove it or merge it with another section.
+
+---
+
+# 2. TECH STACK
+
+Use:
+
+* Next.js
+* App Router
+* TypeScript
+* Tailwind CSS
+* React
+* Motion / Framer Motion
+* next/font
+* Lucide React
+
+Use modern React and Next.js patterns.
+
+Prefer Server Components wherever possible.
+
+Use Client Components only where interactivity actually requires them.
+
+Do not unnecessarily turn the entire application into a Client Component.
+
+Do not use:
+
+* Bootstrap
+* WordPress
+* jQuery
+* unnecessary UI frameworks
+* unnecessary animation libraries
+
+The website must run cleanly with:
+
+```bash
+npm run dev
+```
+
+---
+
+# 3. SOURCE OF TRUTH
+
+Use the following priority when determining factual website content:
+
+### Source 1
+
+The existing Neodent Dental Hospitals website / supplied screenshot.
+
+### Source 2
+
+The real clinic photographs supplied with this task.
+
+### Source 3
+
+Verified professional information supplied in this brief.
+
+### Source 4
+
+Design assumptions only for presentation — never for factual claims.
+
+IMPORTANT:
+
+Never turn an assumption into a fact.
+
+Do NOT invent:
+
+* patient numbers
+* years of experience
+* awards
+* ratings
+* testimonials
+* certifications
+* educational qualifications
+* success percentages
+* number of procedures
+* number of clinics
+* prices
+* technology claims
+* "best dentist" claims
+* "No. 1 clinic" claims
+
+If information is unavailable, write around the missing information instead of inventing it.
+
+---
+
+# 4. BUSINESS INFORMATION
+
+## Business
+
+Neodent Dental Hospitals
+
+## Positioning
+
+Expert Dental Care in Hyderabad
+
+## Phone
+
++91 9030648393
+
+## Address
+
+Masjid-e-Azizia, Humayun Nagar Road, Royal Colony, Humayun Nagar, Hyderabad, Telangana, India
+
+## Hours
+
+04:00 PM – 09:00 PM
+
+## Doctor
+
+Dr. Md. Sirajur Rahman
+
+## Specialization
+
+Prosthodontist & Implantologist
+
+## Role
+
+Director — Neodent Dental Hospitals
+
+Only use these professional claims because they have been supplied/verified.
+
+---
+
+# 5. FIRST STEP: INSPECT THE ASSETS
+
+Before building the final UI, inspect every supplied image.
+
+Do not blindly place one image into one section.
+
+Evaluate:
+
+* subject
+* composition
+* lighting
+* visual quality
+* strongest crop
+* emotional value
+* trust value
+* clinical value
+* storytelling potential
+
+Treat the photographs as **real documentary brand photography**.
+
+Do not make the clinic look fake or artificially luxurious.
+
+The goal is to make authentic real-world photography look intentional through:
+
+* composition
+* cropping
+* typography
+* spacing
+* contrast
+* scale
+* layout
+
+Provided assets include:
+
+```text
+machines.jpg
+clinic entrance.jpg
+clinic waiting area.jpg
+doctor with patient.jpg
+dr recieved award.jpg
+machines area.jpg
+machines for doctor.jpg
+```
+
+Recommended possible use:
+
+```text
+doctor with patient.jpg
+→ Hero / Doctor
+
+clinic entrance.jpg
+→ Trust / About / Clinic identity
+
+clinic waiting area.jpg
+→ Patient Experience
+
+machines.jpg
+→ Expertise / Clinic
+
+machines area.jpg
+→ Gallery
+
+machines for doctor.jpg
+→ Gallery / Expertise
+
+dr recieved award.jpg
+→ Recognition
+```
+
+These are suggestions, not rigid requirements.
+
+Choose the strongest composition yourself.
+
+Do not force every supplied image into the page if doing so weakens the design.
+
+---
+
+# 6. VISUAL DESIGN DIRECTION
+
+The visual direction is:
+
+## Premium editorial healthcare
+
+Think:
+
+**boutique medical brand + modern dental hospital + editorial web design**
+
+not:
+
+**generic local dentist template**
+
+The page should have visual rhythm.
+
+Do NOT make every section look the same.
+
+For example:
+
+Hero
+→ immersive
+
+Trust
+→ quiet
+
+About
+→ editorial
+
+Expertise
+→ structured
+
+Doctor
+→ human
+
+Recognition
+→ restrained
+
+Gallery
+→ visually rich
+
+Experience
+→ emotional
+
+Contact
+→ functional
+
+Final CTA
+→ bold
+
+This variation is essential.
+
+---
+
+# 7. COLOR SYSTEM
+
+Use a sophisticated warm healthcare palette.
+
+Starting direction:
+
+```text
+Deep Teal      #123F46
+Charcoal       #15191A
+Warm Ivory     #F7F5F0
+Soft White     #FCFCFA
+Muted Sage     #A8B8AE
+Champagne      #C5A46D
+Soft Gray      #E8E9E5
+```
+
+These are starting points.
+
+Refine the exact tones if necessary based on the supplied photography.
+
+The final result should feel:
+
+* warm
+* premium
+* calm
+* mature
+* trustworthy
+
+Avoid the typical bright blue dental aesthetic.
+
+Avoid excessive gradients.
+
+Use the champagne/gold tone sparingly.
+
+Premium should come from:
+
+**typography + spacing + photography + composition + restraint**
+
+not from glow effects or visual gimmicks.
+
+---
+
+# 8. TYPOGRAPHY
+
+Use a sophisticated modern font pairing.
+
+Preferred:
+
+### Primary
+
+Manrope
+
+### Display accent
+
+DM Serif Display
+
+Use the display face selectively.
+
+Do not turn the whole website into a serif editorial magazine.
+
+Typography should have:
+
+* strong hierarchy
+* generous line-height
+* controlled letter spacing
+* clear contrast
+* responsive scaling
+
+Headlines should be confident, not enormous for the sake of looking dramatic.
+
+---
+
+# 9. ANTI-PATTERN RULES
+
+This is extremely important.
+
+Do NOT create an AI-looking website.
+
+Avoid:
+
+* repetitive 3-column card layouts
+* excessive rounded cards
+* excessive pill-shaped buttons
+* SaaS-style dashboard aesthetics
+* random gradient blobs
+* decorative shapes with no purpose
+* excessive glassmorphism
+* excessive shadows
+* giant centered headings in every section
+* identical left/right split sections repeated throughout
+* too many icons
+* generic stock-style dentistry imagery
+* excessive floating UI
+* meaningless animations
+* over-designed decorative elements
+
+Do not make the site look like a template assembled from components.
+
+It should feel **art-directed**.
+
+---
+
+# 10. VISUAL HIERARCHY
+
+Not every section should be equally visually loud.
+
+Use the following priority:
+
+### Highest visual impact
+
+Hero
+
+### Strong supporting impact
+
+Doctor / Gallery / Patient Experience
+
+### Medium
+
+About / Expertise
+
+### Quiet
+
+Trust / Recognition
+
+### Functional
+
+Contact
+
+### Conversion-focused
+
+Final Appointment CTA
+
+Supporting sections should intentionally become quieter.
+
+Use whitespace strategically.
+
+Do not make every section compete for attention.
+
+---
+
+# 11. NAVIGATION
+
+Build a premium sticky navigation.
+
+Desktop:
+
+Left:
+**NEODENT DENTAL HOSPITALS**
+
+Navigation:
+
+* Home
+* About
+* Expertise
+* Clinic
+* Doctor
+* Contact
+
+Primary CTA:
+
+**Book Appointment**
+
+Initial state:
+
+Clean / transparent / integrated with hero.
+
+Scrolled state:
+
+Warm white or ivory background with subtle blur and a very light shadow/border.
+
+Mobile:
+
+* brand/name
+* hamburger
+* animated menu panel
+
+Make the mobile navigation elegant.
+
+---
+
+# 12. HERO
+
+The hero should be the strongest visual moment.
+
+Use a sophisticated editorial composition.
+
+Possible structure:
+
+### Eyebrow
+
+NEODENT DENTAL HOSPITALS
+
+### Main headline
+
+# Expert Dental Care in Hyderabad
+
+### Supporting copy
+
+Write concise, polished copy communicating:
+
+* thoughtful dental care
+* professional expertise
+* comfortable experience
+* accessible/local care
+
+Do not use generic AI healthcare clichés.
+
+### Primary CTA
+
+Book an Appointment
+
+### Secondary CTA
+
+Call the Clinic
+
+Use the real phone number.
+
+### Visual
+
+Prioritize:
+
+`doctor with patient.jpg`
+
+or another supplied photograph if it creates a stronger composition.
+
+Consider a cinematic image treatment, asymmetric layout, subtle frame, overlapping typography or editorial cropping.
+
+Add a small supporting detail such as:
+
+**Open Today
+04:00 PM — 09:00 PM**
+
+Keep this subtle.
+
+---
+
+# 13. HERO MOTION
+
+Initial page load:
+
+* headline reveals upward
+* supporting text follows
+* CTA appears slightly after
+* image reveals through opacity / clip / scale
+* supporting detail appears last
+
+Use staggered motion.
+
+Animation must feel:
+
+**controlled, elegant and expensive**
+
+not flashy.
+
+---
+
+# 14. TRUST STRIP
+
+Immediately after hero.
+
+Create a restrained trust section using concepts rather than fabricated statistics.
+
+Possible principles:
+
+**Patient-first care**
+
+**Comfortable experience**
+
+**Clinical expertise**
+
+**Accessible dental care**
+
+Do not use fake numbers.
+
+Do not create statistic cards.
+
+Keep this section visually quiet.
+
+---
+
+# 15. ABOUT
+
+Title:
+
+## About Neodent Dental Hospitals
+
+Create an editorial composition using one strong clinic image.
+
+Suggested positioning:
+
+Image + text with asymmetric proportions.
+
+Possible headline:
+
+**Dental care designed around people, not just procedures.**
+
+Use the philosophy from the existing website as inspiration:
+
+* comfortable care
+* convenient care
+* affordable care
+* stress-free experience
+* quality without unnecessary compromise
+
+Rewrite rather than copy.
+
+Keep the copy concise.
+
+Add a small section label:
+
+**OUR PHILOSOPHY**
+
+---
+
+# 16. WHY NEODENT
+
+Do not use four generic feature cards.
+
+Instead create an editorial principle-based section.
+
+Possible themes:
+
+### Patient-first care
+
+A reassuring experience built around the person.
+
+### Comfortable environment
+
+Make the experience feel calm and approachable.
+
+### Professional expertise
+
+Highlight the doctor and clinical focus without unsupported claims.
+
+### Accessible care
+
+Reflect the clinic's philosophy around affordability and quality.
+
+Use:
+
+* typography
+* dividers
+* numbers
+* subtle interaction
+* whitespace
+
+rather than card-heavy UI.
+
+---
+
+# 17. EXPERTISE
+
+Create:
+
+# Our Dental Expertise
+
+Only include services that can reasonably be supported by available information.
+
+Confirmed specialization:
+
+* Prosthodontics
+* Implantology
+
+Additional service categories may only be included when they can be verified from available source material.
+
+Do NOT invent an extensive treatment catalogue.
+
+Design this like an elegant list / editorial navigation rather than generic cards.
+
+Each item may include:
+
+* number
+* service
+* one-line description
+* arrow
+* hover interaction
+
+Optional image reveal on hover.
+
+Keep it simple.
+
+---
+
+# 18. DOCTOR
+
+Create:
+
+# Meet the Doctor
+
+Use:
+
+`doctor with patient.jpg`
+
+and/or
+
+`dr recieved award.jpg`
+
+Display:
+
+**Dr. Md. Sirajur Rahman**
+
+**Prosthodontist & Implantologist**
+
+**Director — Neodent Dental Hospitals**
+
+Do not fabricate an extensive biography.
+
+The layout should communicate:
+
+* professionalism
+* humanity
+* confidence
+* trust
+
+Use editorial photography rather than a standard profile-card layout.
+
+---
+
+# 19. RECOGNITION
+
+Use:
+
+`dr recieved award.jpg`
+
+Create a restrained professional recognition area.
+
+Do not invent the exact award title if it cannot be confidently determined.
+
+Suggested concept:
+
+**Professional Recognition**
+
+Use concise copy around professional commitment and recognition.
+
+Do not turn an unclear photograph into a fabricated award claim.
+
+---
+
+# 20. CLINIC GALLERY
+
+Create:
+
+# Inside Neodent
+
+Use the actual clinic photography.
+
+Potential assets:
+
+* clinic entrance.jpg
+* clinic waiting area.jpg
+* machines.jpg
+* machines area.jpg
+* machines for doctor.jpg
+
+Do NOT use a repetitive Instagram grid.
+
+Use an asymmetric editorial gallery.
+
+Suggested rhythm:
+
+large feature image
++
+two supporting images
++
+wide image
++
+smaller image
+
+Use subtle interaction:
+
+* scale 1.02–1.04
+* overlay
+* caption reveal
+* arrow movement
+
+Optional lightbox.
+
+The photography itself should be the visual focus.
+
+---
+
+# 21. PATIENT EXPERIENCE
+
+Create an emotional, spacious section.
+
+Headline direction:
+
+**A calmer way to experience dental care.**
+
+Copy should communicate:
+
+* reassurance
+* comfort
+* clarity
+* approachable care
+
+Use a strong clinic photograph.
+
+Do not over-explain.
+
+This should feel like an emotional pause before the conversion section.
+
+---
+
+# 22. CONTACT
+
+Create:
+
+# Visit Neodent Dental Hospitals
+
+Use a clean two-column layout on desktop.
+
+### Address
+
+Masjid-e-Azizia, Humayun Nagar Road, Royal Colony, Humayun Nagar, Hyderabad, Telangana, India
+
+### Phone
+
++91 9030648393
+
+### Hours
+
+04:00 PM – 09:00 PM
+
+Buttons:
+
+**Call Now**
+
+**Get Directions**
+
+Phone must use a proper `tel:` link.
+
+Directions should use a usable map/directions link.
+
+---
+
+# 23. MAP
+
+Include a map or map-preview area.
+
+Prioritize reliability and visual integration over technical complexity.
+
+Do not require a custom map implementation.
+
+A clean map embed or link-based map experience is sufficient.
+
+Do not let the map visually dominate the contact section.
+
+---
+
+# 24. FINAL APPOINTMENT CTA
+
+Create a strong conversion section near the bottom.
+
+Headline:
+
+Create a concise appointment-oriented headline.
+
+Supporting copy:
+
+One or two lines maximum.
+
+Primary:
+
+**Book an Appointment**
+
+Secondary:
+
+**Call +91 9030648393**
+
+Possible appointment interaction:
+
+A simple frontend form or modal.
+
+Fields:
+
+* Name
+* Phone
+* Preferred date
+* Message
+
+Implement basic validation.
+
+No backend is required unless explicitly requested.
+
+---
+
+# 25. FOOTER
+
+Create a premium minimal footer.
+
+Include:
+
+Neodent Dental Hospitals
+
+Expert Dental Care in Hyderabad
+
+Address
+
+Phone
+
+Navigation
+
+Copyright
+
+Do not include GoDaddy branding.
+
+---
+
+# 26. MOBILE CONVERSION BAR
+
+On mobile only, create a fixed bottom action bar.
+
+Actions:
+
+**Call**
+
+**Book Appointment**
+
+Make it elegant and unobtrusive.
+
+This should remain easy to access without covering meaningful page content.
+
+---
+
+# 27. MOTION SYSTEM
+
+Use Motion / Framer Motion selectively.
+
+Use animation for:
+
+* hero entrance
+* section reveals
+* image reveals
+* navigation transition
+* hover interactions
+* mobile menu
+* gallery interaction
+* button microinteractions
+
+Avoid:
+
+* constant movement
+* bouncing elements
+* excessive parallax
+* distracting floating effects
+* animation on every single element
+
+Animation should support hierarchy rather than compete with it.
+
+Respect:
+
+`prefers-reduced-motion`
+
+---
+
+# 28. RESPONSIVE DESIGN
+
+Do not treat mobile as a collapsed desktop.
+
+Design mobile intentionally.
+
+Test at minimum:
+
+### Mobile
+
+375px
+
+390px
+
+430px
+
+### Tablet
+
+768px
+
+1024px
+
+### Desktop
+
+1280px
+
+1440px
+
+1920px
+
+Pay particular attention to:
+
+* hero cropping
+* headline line breaks
+* CTA stacking
+* navigation
+* image composition
+* gallery arrangement
+* sticky CTA
+* section spacing
+* form usability
+
+---
+
+# 29. CONTENT STYLE
+
+Copy must be:
+
+* concise
+* human
+* confident
+* locally relevant
+* trustworthy
+* understated
+
+Avoid generic AI phrases such as:
+
+"world-class care"
+
+"state-of-the-art facility"
+
+"best-in-class"
+
+"perfect smile"
+
+"journey to your perfect smile"
+
+"where excellence meets compassion"
+
+unless independently supported and genuinely appropriate.
+
+Prefer specific, clear language.
+
+Avoid large paragraphs.
+
+---
+
+# 30. ACCESSIBILITY
+
+Implement:
+
+* semantic HTML
+* correct heading structure
+* descriptive alt text
+* keyboard navigation
+* visible focus states
+* accessible mobile navigation
+* accessible buttons
+* appropriate color contrast
+* reduced motion support
+
+---
+
+# 31. SEO
+
+Implement:
+
+Title:
+
+**Neodent Dental Hospitals | Expert Dental Care in Hyderabad**
+
+Create an appropriate meta description.
+
+Include appropriate:
+
+* Open Graph metadata
+* favicon
+* canonical metadata where appropriate
+* Dentist / LocalBusiness structured data
+
+Use only verified business information.
+
+Do not create fake aggregate ratings or review schema.
+
+---
+
+# 32. PERFORMANCE
+
+Optimize for production quality.
+
+Use:
+
+* Next.js Image
+* appropriate image sizes
+* lazy loading where appropriate
+* responsive image sizes
+* minimal client-side JavaScript
+* server components wherever practical
+
+Avoid:
+
+* unnecessary dependencies
+* giant image payloads
+* unnecessary animation calculations
+* layout shifts
+
+---
+
+# 33. CONTENT ARCHITECTURE
+
+Keep editable business content separate from visual components.
+
+Recommended:
+
+```text
+app/
+  page.tsx
+  layout.tsx
+  globals.css
+
+components/
+  navbar.tsx
+  hero.tsx
+  trust-strip.tsx
+  about.tsx
+  why-neodent.tsx
+  expertise.tsx
+  doctor.tsx
+  recognition.tsx
+  clinic-gallery.tsx
+  patient-experience.tsx
+  contact.tsx
+  appointment-cta.tsx
+  footer.tsx
+  mobile-cta.tsx
+
+data/
+  clinic.ts
+  services.ts
+
+public/
+  images/
+```
+
+Create a typed clinic data object.
+
+Example:
+
+```ts
+export const clinic = {
+  name: "Neodent Dental Hospitals",
+  tagline: "Expert Dental Care in Hyderabad",
+  phone: "+91 9030648393",
+  address:
+    "Masjid-e-Azizia, Humayun Nagar Road, Royal Colony, Humayun Nagar, Hyderabad, Telangana, India",
+  hours: "04:00 PM – 09:00 PM",
+  doctor: {
+    name: "Dr. Md. Sirajur Rahman",
+    specialization: "Prosthodontist & Implantologist",
+    role: "Director",
+  },
+};
+```
+
+Keep this data editable.
+
+---
+
+# 34. IMPORTANT DESIGN PRINCIPLE
+
+Do not over-design the site.
+
+The website should feel premium because of:
+
+**typography
+spacing
+composition
+photography
+color restraint
+hierarchy
+motion
+simplicity**
+
+not because of:
+
+**effects
+gradients
+shadows
+glows
+decorative blobs
+complex UI**
+
+---
+
+# 35. SELF-CRITIQUE BEFORE FINISHING
+
+Once the first complete version is built:
+
+STOP.
+
+Do not immediately consider the task complete.
+
+Review the website as a senior creative director.
+
+Ask:
+
+### Visual quality
+
+Does this look like an agency-designed healthcare website?
+
+### Layout
+
+Are too many sections using the same layout pattern?
+
+### Typography
+
+Does the hierarchy feel premium?
+
+### Photography
+
+Are the real clinic images being used intelligently?
+
+### Color
+
+Does the palette feel sophisticated rather than generic?
+
+### Motion
+
+Are animations subtle and purposeful?
+
+### UX
+
+Can a first-time visitor understand the clinic quickly?
+
+### Conversion
+
+Is it obvious how to call and book?
+
+### Authenticity
+
+Does the website feel like a real dental hospital rather than an AI-generated template?
+
+### Mobile
+
+Does the mobile version feel intentionally designed?
+
+If the answer to any is no, improve the implementation before finishing.
+
+---
+
+# 36. DEFINITION OF DONE
+
+Do not consider the project complete until:
+
+### Visual
+
+* no repetitive section patterns
+* no awkward spacing
+* no weak typography hierarchy
+* no poor image cropping
+* no accidental empty areas
+* no unnecessary decorative elements
+
+### UX
+
+* navigation works
+* mobile navigation works
+* anchor links work
+* phone button works
+* directions button works
+* appointment interaction works
+* mobile CTA works
+
+### Technical
+
+* zero TypeScript errors
+* zero console errors
+* no hydration errors
+* no broken imports
+* no broken images
+* no layout overflow
+* no unnecessary client components
+
+### Responsive
+
+Verify mobile, tablet and desktop layouts.
+
+### Accessibility
+
+Verify keyboard navigation, contrast, labels and reduced-motion behavior.
+
+### Final quality
+
+The finished website should feel:
+
+**Calm. Premium. Trustworthy. Human. Intentional.**
+
+Not:
+
+**Generic. Template-based. Over-designed. AI-generated.**
+
+---
+
+# 37. BUILD ORDER
+
+Build in this order:
+
+1. Global design system
+2. Typography
+3. Navigation
+4. Hero
+5. Trust strip
+6. About
+7. Why Neodent
+8. Expertise
+9. Doctor
+10. Recognition
+11. Clinic Gallery
+12. Patient Experience
+13. Contact
+14. Appointment CTA
+15. Footer
+16. Mobile CTA
+17. Responsive refinement
+18. Animation refinement
+19. SEO/accessibility
+20. Final visual QA
+
+Do not prematurely optimize tiny details before the overall composition is strong.
+
+---
+
+# 38. FINAL CREATIVE DIRECTION
+
+The website should feel like it belongs to a **serious, established dental practice in Hyderabad**, but presented through a modern premium digital identity.
+
+The goal is not to make the clinic appear luxurious.
+
+The goal is to make the clinic appear:
+
+**credible + professional + welcoming + modern + trustworthy.**
+
+Use the real photographs to create authenticity.
+
+Use design to create polish.
+
+Use copy to create clarity.
+
+Use motion to create refinement.
+
+Use layout to create trust.
+
+Build the site accordingly.
