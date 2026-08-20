@@ -46,6 +46,9 @@ const telPhone = "tel:+919030648393";
 const whatsappLink = `https://wa.me/919030648393?text=${encodeURIComponent(
   "Hi, I'd like to book an appointment at Neodent Dental Hospitals.",
 )}`;
+const whatsappConsultLink = `https://wa.me/919030648393?text=${encodeURIComponent(
+  "Hi, I'd like to enquire about a consultation at Neodent Dental Hospitals.",
+)}`;
 const address =
   "Masjid-e-Azizia, Humayun Nagar Road, Royal Colony, Humayun Nagar, Hyderabad, Telangana, India";
 const shortLocation = "Humayun Nagar, Hyderabad";
@@ -235,7 +238,7 @@ const HERO_AUTOPLAY_MS = 7000;
 const inertAttr = (isInert: boolean) =>
   (isInert ? { inert: "" } : {}) as Record<string, string>;
 
-function Hero({ onBook }: { onBook: () => void }) {
+function Hero() {
   const [active, setActive] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -264,71 +267,104 @@ function Hero({ onBook }: { onBook: () => void }) {
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero-slides">
-        {/* Slide 01 — the hospital */}
+        {/* Slide 01 — Dr. Siraj, the founder identity */}
         <article
-          className={`hero-slide ${active === 0 ? "hero-slide-active" : ""}`}
+          className={`hero-slide hero-slide-founder ${active === 0 ? "hero-slide-active" : ""}`}
           aria-hidden={active !== 0}
           {...inertAttr(active !== 0)}
         >
-          <div className="container hero-slide-grid">
-            <div className="hero-slide-copy">
-              <div className="hero-eyebrow">NeoDent Dental Hospitals</div>
-              <h1 id="hero-title" className="hero-title">
-                Specialist dental care{" "}
-                <span className="serif">across Hyderabad.</span>
-              </h1>
-              <p className="hero-lead">
-                Experienced dental care led by Dr. Mohd. Siraj Ur Rahman and
-                Dr. Md. Miftah Ur Rahman.
-              </p>
-              <div
-                className="hero-locations-row"
-                aria-label="Two NeoDent locations in Hyderabad"
-              >
-                <span className="hero-locations-kicker">
-                  Two locations · Hyderabad
-                </span>
-                <span className="hero-locations-names">
-                  Humayun Nagar <span aria-hidden="true">·</span> Nampally
-                </span>
-              </div>
-              <div className="hero-rating" data-testid="text-hero-rating">
-                <span className="hero-rating-stars" aria-hidden="true">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star
-                      key={index}
-                      size={13}
-                      fill="currentColor"
-                      strokeWidth={0}
-                    />
-                  ))}
-                </span>
-                <span className="hero-rating-score">
-                  {googleRating.score}
-                </span>
-                <span className="hero-rating-divider" aria-hidden="true">
-                  ·
-                </span>
-                <span>{googleRating.count} Google reviews</span>
-              </div>
-              <div className="hero-actions">
-                <AppButton onClick={onBook} variant="primary">
-                  Book an Appointment <ArrowRight size={15} />
-                </AppButton>
-                <AppButton href="#clinic" variant="ghost">
-                  Explore Locations <ArrowUpRight size={14} />
-                </AppButton>
-              </div>
+          <div className="hero-founder">
+            <div className="hero-founder-bg" aria-hidden="true">
+              <span className="hero-founder-gridlines" />
             </div>
-            <div className="hero-slide-visual hero-visual-hospital">
-              <img
-                className="hero-visual-photo"
-                src={entranceImage}
-                alt="Reception and waiting area inside NeoDent Dental Hospitals"
-                loading="eager"
-              />
-              <div className="hero-visual-logo-badge">
-                <img src={officialLogo} alt="NeoDent Dental Hospitals logo" />
+            <span className="hero-founder-vertical-label" aria-hidden="true">
+              Humayun Nagar &nbsp;·&nbsp; Nampally &nbsp;·&nbsp; Hyderabad
+            </span>
+            <div className="container hero-founder-inner">
+              <div className="hero-founder-copy">
+                <div className="hero-eyebrow">NeoDent Dental Hospitals</div>
+                <p className="hero-founder-tagline">
+                  Changing smiles since 3 decades.
+                </p>
+                <h1 id="hero-title" className="hero-title hero-founder-title">
+                  Three decades{" "}
+                  <span className="serif">of changing smiles.</span>
+                </h1>
+                <p className="hero-credentials">
+                  Dr. Mohd. Siraj Ur Rahman · BDS, FCIP, MDS (Chennai)
+                </p>
+                <p className="hero-lead">
+                  Dental Surgeon, Prosthodontist and Implantologist. Professor
+                  at Osmania Government Dental College &amp; Hospital,
+                  Hyderabad. Director, NeoDent Dental Hospitals.
+                </p>
+                <div className="hero-rating" data-testid="text-hero-rating">
+                  <span className="hero-rating-stars" aria-hidden="true">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Star
+                        key={index}
+                        size={13}
+                        fill="currentColor"
+                        strokeWidth={0}
+                      />
+                    ))}
+                  </span>
+                  <span className="hero-rating-score">
+                    {googleRating.score}
+                  </span>
+                  <span className="hero-rating-divider" aria-hidden="true">
+                    ·
+                  </span>
+                  <span>{googleRating.count} Google reviews</span>
+                </div>
+                <div
+                  className="hero-founder-locations"
+                  aria-label="Two NeoDent locations in Hyderabad"
+                >
+                  <MapPin size={13} aria-hidden="true" />
+                  <span>2 Hyderabad locations</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Humayun Nagar</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Nampally</span>
+                </div>
+                <div className="hero-founder-contact">
+                  <span className="hero-founder-contact-label">
+                    Call today for a consultation
+                  </span>
+                  <a
+                    className="hero-founder-phone"
+                    href={telPhone}
+                    data-testid="link-hero-phone"
+                  >
+                    <Phone size={16} aria-hidden="true" />
+                    {phone}
+                  </a>
+                </div>
+                <div className="hero-actions">
+                  <AppButton href={telPhone} variant="primary">
+                    Call for Consultation <ArrowRight size={15} />
+                  </AppButton>
+                  <AppButton href={whatsappConsultLink} variant="ghost">
+                    WhatsApp the Clinic <MessageCircle size={14} />
+                  </AppButton>
+                </div>
+              </div>
+              <div className="hero-founder-visual">
+                <span className="hero-founder-frame" aria-hidden="true" />
+                <span className="hero-founder-mark" aria-hidden="true">
+                  30<span>+</span>
+                </span>
+                <span className="hero-founder-mark-caption" aria-hidden="true">
+                  Years of changing smiles
+                </span>
+                <span className="hero-founder-groundline" aria-hidden="true" />
+                <img
+                  className="hero-founder-portrait"
+                  src={recognitionImage}
+                  alt="Dr. Mohd. Siraj Ur Rahman, BDS, FCIP, MDS, Director of NeoDent Dental Hospitals, Hyderabad"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
@@ -2436,7 +2472,7 @@ function Home() {
     <div className="site">
       <Navbar onBook={() => setAppointmentOpen(true)} />
       <main>
-        <Hero onBook={() => setAppointmentOpen(true)} />
+        <Hero />
         <TrustStrip />
         <About />
         <WhyNeodent />
