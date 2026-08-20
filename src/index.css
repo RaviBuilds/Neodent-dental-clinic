@@ -1307,6 +1307,31 @@ button {
   }
 }
 
+@media (max-width: 600px) {
+  .hero-founder-inner {
+    grid-template-rows: 230px auto;
+    padding-top: 8px;
+    gap: 0;
+  }
+  .hero-founder-visual {
+    height: 230px;
+    min-height: 230px;
+    align-self: end;
+  }
+  .hero-founder-portrait {
+    display: block;
+    height: 100%;
+    max-height: 230px;
+    width: auto;
+  }
+  .hero-founder-frame {
+    height: 210px;
+  }
+  .hero-founder-groundline {
+    bottom: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-slide-grid,
   .hero-slide-grid-reverse {
