@@ -618,6 +618,346 @@ button {
 }
 
 /* ========================================
+   HERO — THREE-SLIDE EDITORIAL REDESIGN
+   Palette restricted to NeoDent red / white / charcoal.
+   ======================================== */
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  max-height: 980px;
+  display: flex;
+  align-items: stretch;
+  background: var(--neodent-charcoal);
+  color: var(--neodent-ivory);
+  overflow: hidden;
+}
+.hero-slides {
+  position: relative;
+  flex: 1;
+  width: 100%;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 0.72, 0.2, 1),
+    visibility 0.9s;
+}
+.hero-slide-active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.hero-slide-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  align-items: center;
+  gap: 56px;
+  padding: 108px 0 96px;
+  width: 100%;
+}
+.hero-slide-grid-reverse {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+}
+.hero-slide-grid-reverse .hero-slide-copy {
+  order: 2;
+}
+.hero-slide-grid-reverse .hero-slide-visual {
+  order: 1;
+}
+.hero-slide-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 560px;
+}
+.hero-eyebrow {
+  color: rgba(251, 250, 247, 0.62);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  animation: rise 0.9s both cubic-bezier(0.16, 0.72, 0.2, 1);
+}
+.hero-title {
+  font-size: clamp(42px, 5.6vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  margin: 18px 0 20px;
+  animation: rise 1s 0.08s both cubic-bezier(0.16, 0.72, 0.2, 1);
+}
+.hero-title .serif {
+  color: var(--neodent-red);
+}
+.hero-credentials {
+  color: rgba(251, 250, 247, 0.85);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 12px;
+  padding-left: 14px;
+  border-left: 2px solid var(--neodent-red);
+  animation: rise 1s 0.16s both cubic-bezier(0.16, 0.72, 0.2, 1);
+}
+.hero-lead {
+  color: rgba(251, 250, 247, 0.78);
+  font-size: 16.5px;
+  line-height: 1.65;
+  max-width: 460px;
+  margin: 0;
+  animation: rise 1s 0.22s both cubic-bezier(0.16, 0.72, 0.2, 1);
+}
+.hero-locations-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 24px;
+  padding-left: 14px;
+  border-left: 2px solid var(--neodent-red);
+  animation: rise 1s 0.28s both cubic-bezier(0.16, 0.72, 0.2, 1);
+}
+.hero-locations-kicker {
+  color: rgba(251, 250, 247, 0.6);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.hero-locations-names {
+  color: var(--neodent-ivory);
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+.hero-locations-names span {
+  color: var(--neodent-red);
+  padding: 0 6px;
+}
+.hero-slide .hero-rating {
+  align-self: flex-start;
+  margin-top: 20px;
+  animation: rise 1s 0.34s both cubic-bezier(0.16, 0.72, 0.2, 1);
+}
+.hero-slide .hero-actions {
+  margin-top: 34px;
+  animation: rise 1s 0.4s both cubic-bezier(0.16, 0.72, 0.2, 1);
+}
+.hero-slide .hero-actions .button-primary {
+  min-width: 214px;
+}
+.hero-slide-visual {
+  position: relative;
+  height: min(58vh, 560px);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.hero-visual-hospital {
+  border: 1px solid rgba(251, 250, 247, 0.14);
+}
+.hero-visual-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.92) contrast(1.02);
+}
+.hero-visual-logo-badge {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--neodent-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+.hero-visual-logo-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.hero-visual-doctor {
+  background: linear-gradient(
+    180deg,
+    rgba(215, 25, 32, 0.14) 0%,
+    rgba(22, 28, 30, 0) 55%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.hero-visual-portrait {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+.hero-visual-video {
+  background: var(--neodent-ink);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.hero-visual-video-el {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-visual-portrait-overlay {
+  position: relative;
+  z-index: 1;
+  height: 92%;
+  width: auto;
+  max-width: 62%;
+  object-fit: contain;
+  object-position: bottom left;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.45));
+}
+.hero-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 28px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  pointer-events: none;
+}
+.hero-nav-arrow,
+.hero-nav-dots,
+.hero-nav-index {
+  pointer-events: auto;
+}
+.hero-nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(251, 250, 247, 0.28);
+  background: rgba(22, 28, 30, 0.5);
+  color: var(--neodent-ivory);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+.hero-nav-arrow:hover {
+  border-color: var(--neodent-red);
+  background: rgba(215, 25, 32, 0.18);
+}
+.hero-nav-dots {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.hero-nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(251, 250, 247, 0.4);
+  background: transparent;
+  padding: 0;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+.hero-nav-dot-active {
+  background: var(--neodent-red);
+  border-color: var(--neodent-red);
+  transform: scale(1.2);
+}
+.hero-nav-index {
+  color: rgba(251, 250, 247, 0.55);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-left: 6px;
+}
+
+@media (max-width: 1024px) {
+  .hero-slide-grid {
+    gap: 40px;
+    padding: 96px 0 84px;
+  }
+  .hero-slide-visual {
+    height: min(48vh, 460px);
+  }
+}
+
+@media (max-width: 860px) {
+  .hero {
+    min-height: 82vh;
+  }
+  .hero-slide-grid,
+  .hero-slide-grid-reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 104px 0 88px;
+  }
+  .hero-slide-grid-reverse .hero-slide-copy,
+  .hero-slide-grid-reverse .hero-slide-visual {
+    order: initial;
+  }
+  .hero-slide-copy {
+    max-width: 100%;
+  }
+  .hero-title {
+    font-size: clamp(34px, 9vw, 46px);
+  }
+  .hero-lead {
+    max-width: 100%;
+  }
+  .hero-slide-visual {
+    height: 42vh;
+    min-height: 260px;
+  }
+  .hero-visual-portrait-overlay {
+    max-width: 54%;
+  }
+  .hero-nav {
+    bottom: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slide-grid,
+  .hero-slide-grid-reverse {
+    padding: 92px 0 76px;
+  }
+  .hero-slide-visual {
+    height: 36vh;
+    min-height: 220px;
+  }
+  .hero-slide .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-slide .hero-actions .button-primary,
+  .hero-slide .hero-actions .button-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ========================================
    TRUST SECTION - ITERATION 3: REFINED SOPHISTICATION
    Enhanced micro-details and decorative depth
    ======================================== */
