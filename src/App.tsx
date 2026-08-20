@@ -8,8 +8,11 @@ import {
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   ArrowRight,
+  ArrowUpRight,
   Award,
   Check,
+  ChevronLeft,
+  ChevronRight,
   Clock3,
   MapPin,
   Menu,
@@ -25,15 +28,17 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { Route, Switch, useLocation, Router as WouterRouter } from "wouter";
-const entranceImage = "/attached_assets/clinic_entrance_1786721131458.jpg";
-const waitingImage = "/attached_assets/clinic_waiting_area_1786721140929.jpg";
-const doctorImage = "/attached_assets/doctor_with_patient_1786721142899.jpg";
-const recognitionImage = "/attached_assets/dr_recieved_award_1786721137686.jpg";
-const treatmentImage = "/attached_assets/machines_area_1786721129175.jpg";
-const equipmentImage = "/attached_assets/machines_1786721133671.jpg";
-const detailImage = "/attached_assets/machines_area_1786721129175.jpg";
+const entranceImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
+const waitingImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
+const doctorImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Md.%20Miftah%20Ur%20Rahman%20-%20Neodent%20Dental%20Hospital-wBj3lG72iqjj2q6uX5ZH0gWGAKB5DN.png";
+const recognitionImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Mohd.%20Siraj%20Ur%20Rahman%20-%20Neodent%20Dental%20Hospital%20Hyd-xayK2qFwCaiNp3g8lIGg8iTOwsb2qI.png";
+const treatmentVideo = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Miftah%20Neodent%20dental%20clinic%20Hyderabad%20-%20treatment%20video-DGRRw5vjVc271Ni7yHPsXcNruG7QvW.mp4";
+const treatmentImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
+const equipmentImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
+const detailImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
 const philosophyImage = "/attached_assets/our-philosophy.webp";
-const visitImage = "/attached_assets/machines_for_doctor_1786721135828.jpg";
+const visitImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
+const officialLogo = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20hyderabad%20logo-4P3cEjHdeEdFSXWdfaBHy5QYphO7TW.jpeg";
 
 const queryClient = new QueryClient();
 const phone = "+91 9030648393";
@@ -41,9 +46,20 @@ const telPhone = "tel:+919030648393";
 const whatsappLink = `https://wa.me/919030648393?text=${encodeURIComponent(
   "Hi, I'd like to book an appointment at Neodent Dental Hospitals.",
 )}`;
+const whatsappConsultLink = `https://wa.me/919030648393?text=${encodeURIComponent(
+  "Hi, I'd like to enquire about a consultation at Neodent Dental Hospitals.",
+)}`;
 const address =
   "Masjid-e-Azizia, Humayun Nagar Road, Royal Colony, Humayun Nagar, Hyderabad, Telangana, India";
 const shortLocation = "Humayun Nagar, Hyderabad";
+const heroLocations = [
+  { number: "01", name: "Humayun Nagar", detail: "Humayun Nagar, Hyderabad" },
+  {
+    number: "02",
+    name: "Nampally",
+    detail: "Medwin Hospital Complex, Nampally",
+  },
+] as const;
 const directions =
   "https://www.google.com/maps/search/?api=1&query=Masjid-e-Azizia%2C%20Humayun%20Nagar%20Road%2C%20Royal%20Colony%2C%20Humayun%20Nagar%2C%20Hyderabad%2C%20Telangana%2C%20India";
 const googleRating = { score: "4.3", count: 259 };
@@ -98,7 +114,7 @@ function AppButton({
   children: ReactNode;
   onClick?: () => void;
   href?: string;
-  variant?: "dark" | "light" | "ghost";
+  variant?: "dark" | "light" | "ghost" | "primary";
   className?: string;
   type?: "button" | "submit";
 }) {
@@ -151,7 +167,13 @@ function Navbar({ onBook }: { onBook: () => void }) {
           onClick={closeMenu}
           data-testid="link-home-brand"
         >
-          <span className="brand-mark" aria-hidden="true" />
+          <span className="brand-logo-wrap">
+            <img
+              className="brand-logo"
+              src={officialLogo}
+              alt="Neodent Dental Hospitals"
+            />
+          </span>
           <span className="brand-word">
             NEODENT
             <br />
@@ -169,7 +191,7 @@ function Navbar({ onBook }: { onBook: () => void }) {
             </a>
           ))}
         </nav>
-        <AppButton onClick={onBook} variant={scrolled ? "dark" : "light"}>
+        <AppButton onClick={onBook} variant="primary">
           Book Appointment
         </AppButton>
         <button
@@ -207,88 +229,268 @@ function Navbar({ onBook }: { onBook: () => void }) {
   );
 }
 
-function Hero({ onBook }: { onBook: () => void }) {
+const heroSlideMeta = [
+  { id: "hospital", label: "Hospitals" },
+  { id: "siraj", label: "Dr. Siraj" },
+  { id: "miftah", label: "Dr. Miftah" },
+] as const;
+const HERO_AUTOPLAY_MS = 7000;
+const inertAttr = (isInert: boolean) =>
+  (isInert ? { inert: "" } : {}) as Record<string, string>;
+
+function Hero() {
+  const [active, setActive] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const startTimer = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
+      setActive((current) => (current + 1) % heroSlideMeta.length);
+    }, HERO_AUTOPLAY_MS);
+  };
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
+
+  const goTo = (index: number) => {
+    setActive(index);
+    startTimer();
+  };
+  const goRelative = (delta: number) => {
+    goTo((active + delta + heroSlideMeta.length) % heroSlideMeta.length);
+  };
+
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
-      <div className="hero-image">
-        <img
-          src={doctorImage}
-          alt="Dr. Md. Sirajur Rahman with a patient at Neodent"
-        />
-      </div>
-      <div className="container">
-        <div className="hero-content">
-          <div className="eyebrow">Neodent Dental Hospitals</div>
-          <div className="hero-rating" data-testid="text-hero-rating">
-            <span className="hero-rating-stars" aria-hidden="true">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <Star
-                  key={index}
-                  size={13}
-                  fill="currentColor"
-                  strokeWidth={0}
+      <div className="hero-slides">
+        {/* Slide 01 — Dr. Siraj, the founder identity */}
+        <article
+          className={`hero-slide hero-slide-founder ${active === 0 ? "hero-slide-active" : ""}`}
+          aria-hidden={active !== 0}
+          {...inertAttr(active !== 0)}
+        >
+          <div className="hero-founder">
+            <div className="hero-founder-bg" aria-hidden="true">
+              <span className="hero-founder-gridlines" />
+            </div>
+            <span className="hero-founder-vertical-label" aria-hidden="true">
+              Humayun Nagar &nbsp;·&nbsp; Nampally &nbsp;·&nbsp; Hyderabad
+            </span>
+            <div className="container hero-founder-inner">
+              <div className="hero-founder-copy">
+                <div className="hero-eyebrow">NeoDent Dental Hospitals</div>
+                <p className="hero-founder-tagline">
+                  Changing smiles since 3 decades.
+                </p>
+                <h1 id="hero-title" className="hero-title hero-founder-title">
+                  Three decades{" "}
+                  <span className="serif">of changing smiles.</span>
+                </h1>
+                <div className="hero-founder-identity">
+                  <p className="hero-credentials">Dr. Mohd. Siraj Ur Rahman</p>
+                  <p className="hero-founder-expertise">
+                    Dental Surgeon · Prosthodontist · Implantologist
+                  </p>
+                </div>
+                <div className="hero-rating" data-testid="text-hero-rating">
+                  <span className="hero-rating-stars" aria-hidden="true">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Star
+                        key={index}
+                        size={13}
+                        fill="currentColor"
+                        strokeWidth={0}
+                      />
+                    ))}
+                  </span>
+                  <span className="hero-rating-score">
+                    {googleRating.score}
+                  </span>
+                  <span className="hero-rating-divider" aria-hidden="true">
+                    ·
+                  </span>
+                  <span>{googleRating.count} Google reviews</span>
+                </div>
+                <div
+                  className="hero-founder-locations"
+                  aria-label="Two NeoDent locations in Hyderabad"
+                >
+                  <MapPin size={13} aria-hidden="true" />
+                  <span>2 Hyderabad locations</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Humayun Nagar</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Nampally</span>
+                </div>
+                <div className="hero-founder-contact">
+                  <span className="hero-founder-contact-label">
+                    Call today for a consultation
+                  </span>
+                  <a
+                    className="hero-founder-phone"
+                    href={telPhone}
+                    data-testid="link-hero-phone"
+                  >
+                    <Phone size={16} aria-hidden="true" />
+                    {phone}
+                  </a>
+                </div>
+                <div className="hero-actions">
+                  <AppButton href={telPhone} variant="primary">
+                    Call for Consultation <ArrowRight size={15} />
+                  </AppButton>
+                  <AppButton href={whatsappConsultLink} variant="ghost">
+                    WhatsApp the Clinic <MessageCircle size={14} />
+                  </AppButton>
+                </div>
+              </div>
+              <div className="hero-founder-visual">
+                <span className="hero-founder-frame" aria-hidden="true" />
+                <span className="hero-founder-mark" aria-hidden="true">
+                  30<span>+</span>
+                </span>
+                <span className="hero-founder-mark-caption" aria-hidden="true">
+                  Years of changing smiles
+                </span>
+                <span className="hero-founder-groundline" aria-hidden="true" />
+                <img
+                  className="hero-founder-portrait"
+                  src={recognitionImage}
+                  alt="Dr. Mohd. Siraj Ur Rahman, BDS, FCIP, MDS, Director of NeoDent Dental Hospitals, Hyderabad"
+                  loading="eager"
                 />
-              ))}
-            </span>
-            <span className="hero-rating-score">{googleRating.score}</span>
-            <span className="hero-rating-divider" aria-hidden="true">
-              ·
-            </span>
-            <span>{googleRating.count} Google reviews</span>
-          </div>
-          <h1 id="hero-title">
-            Expert dental care in <span className="serif">Hyderabad.</span>
-          </h1>
-          <p className="hero-copy">
-            Thoughtful treatment, professional expertise and a clinic experience
-            designed to help you feel at ease.
-          </p>
-          <div className="hero-hours-mobile">
-            <a
-              href={telPhone}
-              className="hero-hours-mobile-phone"
-              data-testid="link-hero-mobile-phone"
-            >
-              <Phone size={14} /> {phone}
-            </a>
-            <div className="hero-hours-mobile-row">
-              <strong>Open today</strong>
-              <span>04:00 PM — 09:00 PM</span>
-              <span className="hero-rating-divider" aria-hidden="true">
-                ·
-              </span>
-              <a href={directions} data-testid="link-hero-mobile-directions">
-                <MapPin size={12} /> {shortLocation}
-              </a>
+              </div>
             </div>
           </div>
-          <div className="hero-actions">
-            <AppButton onClick={onBook} variant="light">
-              Book an Appointment <ArrowRight size={15} />
-            </AppButton>
-            <AppButton href={telPhone} variant="ghost">
-              <Phone size={14} /> Call the Clinic
-            </AppButton>
+        </article>
+
+        {/* Slide 02 — Dr. Siraj */}
+        <article
+          className={`hero-slide ${active === 1 ? "hero-slide-active" : ""}`}
+          aria-hidden={active !== 1}
+          {...inertAttr(active !== 1)}
+        >
+          <div className="container hero-slide-grid hero-slide-grid-reverse">
+            <div className="hero-slide-copy">
+              <div className="hero-eyebrow">Director, NeoDent Dental Hospitals</div>
+              <h1 className="hero-title">
+                Dr. Mohd. Siraj{" "}
+                <span className="serif">Ur Rahman.</span>
+              </h1>
+              <p className="hero-credentials">
+                BDS, FCIP, MDS (Chennai)
+              </p>
+              <p className="hero-lead">
+                Dental Surgeon · Prosthodontist · Implantologist. Professor at
+                Osmania Government Dental College &amp; Hospital, Hyderabad.
+              </p>
+              <div className="hero-actions">
+                <AppButton href="#doctor" variant="primary">
+                  Meet Dr. Siraj <ArrowRight size={15} />
+                </AppButton>
+              </div>
+            </div>
+            <div className="hero-slide-visual hero-visual-doctor">
+              <img
+                className="hero-visual-portrait"
+                src={recognitionImage}
+                alt="Dr. Mohd. Siraj Ur Rahman, Director of NeoDent Dental Hospitals"
+                loading="eager"
+              />
+            </div>
           </div>
+        </article>
+
+        {/* Slide 03 — Dr. Miftah */}
+        <article
+          className={`hero-slide ${active === 2 ? "hero-slide-active" : ""}`}
+          aria-hidden={active !== 2}
+          {...inertAttr(active !== 2)}
+        >
+          <div className="container hero-slide-grid">
+            <div className="hero-slide-copy">
+              <div className="hero-eyebrow">
+                Assistant Director, NeoDent Dental Hospitals
+              </div>
+              <h1 className="hero-title">
+                Dr. Md. Miftah{" "}
+                <span className="serif">Ur Rahman.</span>
+              </h1>
+              <p className="hero-credentials">
+                BDS, MDS, FICOI (U.S.A.) · Gold Medalist
+              </p>
+              <p className="hero-lead">
+                Prosthodontist &amp; Implantologist. Assistant Professor at SB
+                Patil Dental College &amp; Hospital.
+              </p>
+              <div className="hero-actions">
+                <AppButton href="#expertise" variant="primary">
+                  Explore Treatments <ArrowRight size={15} />
+                </AppButton>
+              </div>
+            </div>
+            <div className="hero-slide-visual hero-visual-video">
+              <video
+                className="hero-visual-video-el"
+                src={treatmentVideo}
+                poster={treatmentImage}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-hidden="true"
+              />
+              <img
+                className="hero-visual-portrait hero-visual-portrait-overlay"
+                src={doctorImage}
+                alt="Dr. Md. Miftah Ur Rahman treating a patient at NeoDent"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div className="hero-nav" aria-label="Hero slide navigation">
+        <button
+          type="button"
+          className="hero-nav-arrow"
+          onClick={() => goRelative(-1)}
+          aria-label="Previous slide"
+          data-testid="button-hero-prev"
+        >
+          <ChevronLeft size={16} />
+        </button>
+        <div className="hero-nav-dots">
+          {heroSlideMeta.map((slide, index) => (
+            <button
+              key={slide.id}
+              type="button"
+              className={`hero-nav-dot ${active === index ? "hero-nav-dot-active" : ""}`}
+              onClick={() => goTo(index)}
+              aria-label={`Show ${slide.label} slide`}
+              aria-current={active === index}
+              data-testid={`button-hero-dot-${slide.id}`}
+            />
+          ))}
         </div>
-        <div className="hero-meta">
-          <div className="hero-meta-row">
-            <strong>Open today</strong>04:00 PM — 09:00 PM
-          </div>
-          <div className="hero-meta-row hero-meta-row-phone">
-            <strong>Call</strong>
-            <a href={telPhone} data-testid="link-hero-meta-phone">
-              {phone}
-            </a>
-          </div>
-          <div className="hero-meta-row">
-            <strong>Visit</strong>
-            <a href={directions} data-testid="link-hero-meta-directions">
-              {shortLocation}
-            </a>
-          </div>
-        </div>
-        <div className="scroll-note">Scroll to explore</div>
+        <button
+          type="button"
+          className="hero-nav-arrow"
+          onClick={() => goRelative(1)}
+          aria-label="Next slide"
+          data-testid="button-hero-next"
+        >
+          <ChevronRight size={16} />
+        </button>
+        <span className="hero-nav-index" aria-hidden="true">
+          {String(active + 1).padStart(2, "0")} / 0{heroSlideMeta.length}
+        </span>
       </div>
     </section>
   );
@@ -296,29 +498,33 @@ function Hero({ onBook }: { onBook: () => void }) {
 
 function TrustStrip() {
   const [isVisible, setIsVisible] = useState(false);
+  const [activePrinciple, setActivePrinciple] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
 
   const principles = [
     {
       number: "01",
-      title: "Patient-first care",
-      description: "Care shaped around the individual, not just the procedure.",
+      title: "Experienced specialists",
+      description:
+        "Care led by experienced dental professionals across multiple areas of dentistry.",
     },
     {
       number: "02",
-      title: "A comfortable experience",
+      title: "Comprehensive treatment",
       description:
-        "A reassuring environment designed to make visits feel easier.",
+        "From preventive and restorative care to implants, orthodontics and cosmetic dentistry.",
     },
     {
       number: "03",
-      title: "Clinical expertise",
-      description: "Professional dental knowledge focused on thoughtful care.",
+      title: "Patient-first consultations",
+      description:
+        "Clear conversations, thoughtful treatment planning and care shaped around your individual needs.",
     },
     {
       number: "04",
-      title: "Accessible local care",
-      description: "A conveniently located dental hospital in Hyderabad.",
+      title: "Two Hyderabad locations",
+      description:
+        "Convenient access to NeoDent Dental Hospitals in Humayun Nagar and Nampally.",
     },
   ];
 
@@ -358,13 +564,20 @@ function TrustStrip() {
       <div className="container trust-content">
         <div className="trust-lead">
           <p>A clinic shaped by what patients need from dental care.</p>
+          <span className="trust-lead-support">
+            Good dental care begins with understanding what each patient needs —
+            from the first conversation through treatment and follow-up.
+          </span>
         </div>
         <div className="trust-principles">
           {principles.map((principle, index) => {
             return (
               <div
-                className="trust-item"
+                className={`trust-item ${activePrinciple === index ? "trust-item-active" : ""}`}
                 key={principle.number}
+                onMouseEnter={() => setActivePrinciple(index)}
+                onFocus={() => setActivePrinciple(index)}
+                tabIndex={0}
                 style={{
                   animationDelay: `${0.2 + index * 0.15}s`,
                 }}
@@ -379,6 +592,10 @@ function TrustStrip() {
               </div>
             );
           })}
+        </div>
+        <div className="trust-footer-note">
+          <span>Two locations. One standard of care.</span>
+          <a href="#treatments">Discover our treatments <ArrowRight size={14} aria-hidden="true" /></a>
         </div>
       </div>
     </section>
@@ -471,9 +688,9 @@ function WhyNeodent() {
   const principles = [
     {
       number: "01",
-      title: "Patient-first care",
+      title: "Experienced specialists",
       description:
-        "A reassuring experience built around listening, clarity and the individual in front of us.",
+        "Care led by experienced dental professionals across multiple areas of dentistry.",
       icon: (
         <svg
           width="32"
@@ -501,9 +718,9 @@ function WhyNeodent() {
     },
     {
       number: "02",
-      title: "A comfortable environment",
+      title: "Comprehensive treatment",
       description:
-        "A familiar, approachable setting that gives you space to feel at ease.",
+        "From preventive and restorative care to implants, orthodontics and cosmetic dentistry.",
       icon: (
         <svg
           width="32"
@@ -538,9 +755,9 @@ function WhyNeodent() {
     },
     {
       number: "03",
-      title: "Professional expertise",
+      title: "Patient-first consultations",
       description:
-        "A focused clinical practice led by Dr. Md. Sirajur Rahman, Prosthodontist & Implantologist.",
+        "Clear conversations, thoughtful treatment planning and care shaped around your individual needs.",
       icon: (
         <svg
           width="32"
@@ -567,9 +784,9 @@ function WhyNeodent() {
     },
     {
       number: "04",
-      title: "Accessible local care",
+      title: "Two Hyderabad locations",
       description:
-        "Expert dental care in Hyderabad, in a clinic that is easy to find and easy to reach.",
+        "Convenient access to NeoDent Dental Hospitals in Humayun Nagar and Nampally.",
       icon: (
         <svg
           width="32"
@@ -722,51 +939,21 @@ function Expertise() {
       title: "Implantology",
       description:
         "Thoughtful implant care guided by a considered clinical approach.",
-      icon: (
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            d="M20 10V30"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M20 10C17 10 15 12 15 15V18H25V15C25 12 23 10 20 10Z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M17 22L20 19L23 22"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M17 28L20 25L23 28"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <circle
-            cx="20"
-            cy="30"
-            r="2"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-        </svg>
-      ),
+      icon: <span className="expertise-icon-glyph" aria-hidden="true">+</span>,
+    },
+    {
+      number: "03",
+      title: "Restorative dentistry",
+      description:
+        "Practical restorative care that helps bring back everyday comfort and function.",
+      icon: <span className="expertise-icon-glyph" aria-hidden="true">+</span>,
+    },
+    {
+      number: "04",
+      title: "Cosmetic dentistry",
+      description:
+        "Subtle, considered improvements designed around your natural smile.",
+      icon: <span className="expertise-icon-glyph" aria-hidden="true">+</span>,
     },
   ];
 
@@ -833,8 +1020,8 @@ function Expertise() {
             Our dental <span className="serif">expertise.</span>
           </h2>
           <p className="section-intro" style={{ marginTop: 26 }}>
-            Two areas of professional focus, brought together in one welcoming
-            Hyderabad practice.
+            A focused range of care, brought together in one welcoming Hyderabad
+            practice.
           </p>
         </div>
         <div className="expertise-list">
@@ -1021,10 +1208,15 @@ function Doctor() {
       <div className="container doctor-grid">
         <figure className="doctor-image">
           <div className="doctor-image-inner">
-            <img
-              src={detailImage}
-              alt="Dental equipment and clinical workspace at Neodent"
-              loading="lazy"
+            <video
+              className="doctor-treatment-video"
+              src={treatmentVideo}
+              aria-label="Dr. Miftah Ur Rahman demonstrating treatment at Neodent"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
             />
           </div>
           <figcaption>Care in practice</figcaption>
@@ -1037,8 +1229,8 @@ function Doctor() {
             <span className="serif">A human approach.</span>
           </h2>
           <p className="section-intro">
-            Neodent is directed by a clinician who brings professional focus and
-            a personal presence to every conversation.
+            Neodent is directed by Dr. Md. Sirajur Rahman, whose work brings
+            specialist clinical focus and a personal presence to every conversation.
           </p>
           <h3 className="doctor-name">Dr. Md. Sirajur Rahman</h3>
           <div className="doctor-credentials">
@@ -1052,6 +1244,9 @@ function Doctor() {
           <p className="doctor-description">
             Director — Neodent Dental Hospitals
           </p>
+          <a className="text-link doctor-link" href="#appointment">
+            Book a consultation <ArrowRight size={14} aria-hidden="true" />
+          </a>
         </div>
       </div>
     </section>
@@ -1121,9 +1316,9 @@ function Recognition() {
             A commitment to considered clinical care.
           </h2>
           <p className="recognition-intro">
-            Recognition that comes from consistent delivery of thoughtful,
-            patient-focused treatment — built on a foundation of clinical
-            precision and continued professional development.
+            A professional standard carried into every consultation — with precise
+            planning, continued learning and a patient experience that feels clear
+            from the first conversation.
           </p>
         </div>
 
@@ -1227,7 +1422,7 @@ function Recognition() {
         {/* Footer Meta */}
         <div className="recognition-footer">
           <Clock3 size={18} strokeWidth={2} aria-hidden="true" />
-          Evening Appointments: 04:00 PM - 09:00 PM
+          Evening appointments available at NeoDent Dental Hospitals: 04:00 PM – 09:00 PM
         </div>
       </div>
     </section>
@@ -1290,13 +1485,25 @@ function Contact({ onBook }: { onBook: () => void }) {
           <h2 id="contact-title" className="section-heading">
             Visit Neodent <span className="serif">Dental Hospitals.</span>
           </h2>
+          <div className="contact-location-summary">
+            <span className="contact-location-kicker">Two locations in Hyderabad</span>
+            <div className="contact-location-list">
+              {heroLocations.map((location) => (
+                <a href="#clinic" key={location.number}>
+                  <span>{location.number}</span>
+                  <strong>{location.name}</strong>
+                  <ArrowUpRight size={14} aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          </div>
           <dl className="contact-details">
             <div className="detail detail-1">
               <div className="detail-icon" aria-hidden="true">
                 <MapPin size={18} strokeWidth={2} />
               </div>
               <div className="detail-body">
-                <dt>Address</dt>
+                <dt>Humayun Nagar</dt>
                 <dd>{address}</dd>
               </div>
             </div>
@@ -1371,9 +1578,9 @@ function FinalCta({ onBook }: { onBook: () => void }) {
       <h2 id="cta-title">
         Let’s make your visit feel <span className="serif">simple.</span>
       </h2>
-      <p>Appointments begin with a conversation.</p>
+      <p>Choose your preferred location, then let&apos;s begin with a conversation.</p>
       <div className="final-actions">
-        <AppButton onClick={onBook} variant="light">
+        <AppButton onClick={onBook} variant="primary">
           Book an Appointment <ArrowRight size={14} />
         </AppButton>
         <AppButton href={telPhone} variant="ghost">
@@ -1391,12 +1598,14 @@ function Footer() {
         <div className="footer-top">
           <div>
             <a className="brand" href="#home" data-testid="link-footer-brand">
-              <span className="brand-mark" />
-              <span className="brand-word">
-                NEODENT
-                <br />
-                DENTAL HOSPITALS
-              </span>
+<span className="brand-logo-wrap">
+            <img className="brand-logo" src={officialLogo} alt="Neodent Dental Hospitals" />
+          </span>
+          <span className="brand-word">
+            NEODENT
+            <br />
+            DENTAL HOSPITALS
+          </span>
             </a>
             <p className="footer-tag">
               Expert dental care in Hyderabad, presented with clarity and care.
@@ -1426,12 +1635,13 @@ function Footer() {
                 Get directions
               </a>
               <span>04:00 PM – 09:00 PM</span>
+              <span>Humayun Nagar · Nampally, Hyderabad</span>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Neodent Dental Hospitals</span>
-          <span>Masjid-e-Azizia, Humayun Nagar Road, Hyderabad</span>
+          <span>Two Hyderabad locations · One standard of care</span>
         </div>
       </div>
     </footer>
@@ -1461,7 +1671,7 @@ function FloatingCta({ onBook }: { onBook: () => void }) {
         <MessageCircle size={22} strokeWidth={2} />
         <span className="floating-cta-tooltip">Chat on WhatsApp</span>
       </a>
-      <AppButton onClick={onBook} variant="dark" className="floating-cta-book">
+      <AppButton onClick={onBook} variant="primary" className="floating-cta-book">
         Book Appointment
       </AppButton>
     </div>
@@ -1656,7 +1866,7 @@ function LeadCapture({
           <span>Open today, 04:00 PM – 09:00 PM</span>
         </div>
         <div className="lead-actions">
-          <AppButton onClick={onBook} variant="light">
+          <AppButton onClick={onBook} variant="primary">
             Book an Appointment <ArrowRight size={14} />
           </AppButton>
           <AppButton href={telPhone} variant="ghost">
@@ -2260,7 +2470,7 @@ function Home() {
     <div className="site">
       <Navbar onBook={() => setAppointmentOpen(true)} />
       <main>
-        <Hero onBook={() => setAppointmentOpen(true)} />
+        <Hero />
         <TrustStrip />
         <About />
         <WhyNeodent />
@@ -2278,7 +2488,7 @@ function Home() {
         <AppButton href={telPhone} variant="ghost">
           <Phone size={14} /> Call
         </AppButton>
-        <AppButton onClick={() => setAppointmentOpen(true)} variant="light">
+        <AppButton onClick={() => setAppointmentOpen(true)} variant="primary">
           Book Appointment <ArrowRight size={14} />
         </AppButton>
       </div>
