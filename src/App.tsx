@@ -290,14 +290,12 @@ function Hero() {
                   Three decades{" "}
                   <span className="serif">of changing smiles.</span>
                 </h1>
-                <p className="hero-credentials">
-                  Dr. Mohd. Siraj Ur Rahman · BDS, FCIP, MDS (Chennai)
-                </p>
-                <p className="hero-lead">
-                  Dental Surgeon, Prosthodontist and Implantologist. Professor
-                  at Osmania Government Dental College &amp; Hospital,
-                  Hyderabad. Director, NeoDent Dental Hospitals.
-                </p>
+                <div className="hero-founder-identity">
+                  <p className="hero-credentials">Dr. Mohd. Siraj Ur Rahman</p>
+                  <p className="hero-founder-expertise">
+                    Dental Surgeon · Prosthodontist · Implantologist
+                  </p>
+                </div>
                 <div className="hero-rating" data-testid="text-hero-rating">
                   <span className="hero-rating-stars" aria-hidden="true">
                     {Array.from({ length: 5 }).map((_, index) => (
