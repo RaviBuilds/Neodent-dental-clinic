@@ -28,8 +28,9 @@ import NotFound from "@/pages/not-found";
 import { Route, Switch, useLocation, Router as WouterRouter } from "wouter";
 const entranceImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
 const waitingImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
-const doctorImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Md.%20Miftah%20Ur%20Rahman%20-%20Neodent%20Dental%20Hospital-HHCoQBqw3R4H6HfcL451F7rUHEp8pV.png";
-const recognitionImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Mohd.%20Siraj%20Ur%20Rahman%20-%20Neodent%20Dental%20Hospital%20Hyd-FNl6LpT2NNGIpTqXYcQYeeE6zK8Vcp.png";
+const doctorImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Md.%20Miftah%20Ur%20Rahman%20-%20Neodent%20Dental%20Hospital-wBj3lG72iqjj2q6uX5ZH0gWGAKB5DN.png";
+const recognitionImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Mohd.%20Siraj%20Ur%20Rahman%20-%20Neodent%20Dental%20Hospital%20Hyd-xayK2qFwCaiNp3g8lIGg8iTOwsb2qI.png";
+const treatmentVideo = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Miftah%20Neodent%20dental%20clinic%20Hyderabad%20-%20treatment%20video-DGRRw5vjVc271Ni7yHPsXcNruG7QvW.mp4";
 const treatmentImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
 const equipmentImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
 const detailImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent%20dental%20hospital%20Interior-6gEP3lFz9hLW0mdFgt5OH9BytsCK1e.jpg";
@@ -1025,10 +1026,15 @@ function Doctor() {
       <div className="container doctor-grid">
         <figure className="doctor-image">
           <div className="doctor-image-inner">
-            <img
-              src={detailImage}
-              alt="Dental equipment and clinical workspace at Neodent"
-              loading="lazy"
+            <video
+              className="doctor-treatment-video"
+              src={treatmentVideo}
+              aria-label="Dr. Miftah Ur Rahman demonstrating treatment at Neodent"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
             />
           </div>
           <figcaption>Care in practice</figcaption>
